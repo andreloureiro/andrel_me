@@ -1,2 +1,142 @@
+@import variables, mixins
+
+
+*
+	box-sizing: border-box
+
+img
+	max-width: 100%
+
+hr
+	border: none
+	border-top: rem(1) solid lighten($gray, 20%)
+
 body
-	background: yellow
+	background: $white
+	font-size: rem($context-size)
+	font-weight: 100
+	line-height: 150%
+
+.container
+	width: rem(800)
+	margin: auto
+
+header
+	position: absolute
+	top: 0
+	left: 0
+	width: rem(60)
+	height: 100%
+	background: $green-dark
+	z-index: 300
+	.logo
+		display: block
+		width: 100%
+		height: rem(60)
+		background: $yellow
+	nav
+		display: block
+		width: 100%
+		.menu
+			display: block
+			width: 100%
+			padding: 0
+			.item
+				display: block
+				width: 100%
+				height: rem(60)
+				.link
+					display: table
+					width: 100%
+					height: 100%
+					text-decoration: none
+					color: $white
+					text-transform: uppercase
+					.fa
+						display: table-cell
+						vertical-align: middle
+						text-align: center
+
+header.post
+	height: rem(400)
+
+section.post_list
+	display: block
+	position: relative
+	width: 100%
+	.container
+		.post
+			margin-top: rem(20)
+			.post_description
+				display: inline-block
+				vertical-align: top
+				width: 100%
+				height: 100%
+				padding: 0 rem(10)
+				border: rem(1) solid lighten($gray, 20%)
+				background: white
+				.title
+					font-size: rem(52)
+					font-weight: 100
+					text-align: center
+					a
+						display: block
+						text-decoration: none
+						font-weight: 100
+						color: $black
+				time
+					display: block
+					margin-right: rem(10)
+					color: $gray
+					text-align: center
+					.time_text
+						font-size: rem(12)
+				.excerpt
+					display: block
+					width: 100%
+				
+
+
+article.post 
+	.title
+		display: block
+		padding: rem(40) rem(10)
+		font-size: rem(52)
+		font-weight: 100
+		text-decoration: none
+		font-weight: 100
+		text-align: center
+		background: $blue
+		color: $white
+	.excerpt
+		display: block
+		font-size: rem(30)
+		text-align: center
+		color: $gray-dark
+	.container
+		.content
+			display: block
+			width: 100%
+			padding: 0 rem(10)
+			font-size: rem(20)
+			color: $black
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

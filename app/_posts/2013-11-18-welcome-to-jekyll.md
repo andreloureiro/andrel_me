@@ -2,7 +2,8 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2013-11-18 21:26:12
-categories: jekyll update
+excerpt: Mah oe! Será que rolou?!
+categories: html5
 ---
 
 You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
