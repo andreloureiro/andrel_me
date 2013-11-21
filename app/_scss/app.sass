@@ -22,18 +22,22 @@ body
 	margin: auto
 
 header
+	-webkit-transition: .25s all ease-out
 	position: absolute
 	top: 0
-	left: 0
-	width: rem(60)
+	left: rem(-94)
+	width: rem(150)
 	height: 100%
-	background: $green-dark
+	background: $blue-dark
 	z-index: 300
+	&:hover
+		-webkit-transition: .25s all ease-out
+		-webkit-transform: translateX(rem(94))
 	.logo
 		display: block
 		width: 100%
 		height: rem(60)
-		background: $yellow
+		background: $blue
 	nav
 		display: block
 		width: 100%
@@ -41,24 +45,47 @@ header
 			display: block
 			width: 100%
 			padding: 0
+			margin: 0
 			.item
-				display: block
+				display: table
 				width: 100%
 				height: rem(60)
 				.link
-					display: table
+					display: table-cell
+					vertical-align: middle
 					width: 100%
 					height: 100%
 					text-decoration: none
+					font-size: rem(12)
 					color: $white
+					background: $blue-dark
 					text-transform: uppercase
+					text-align: right
+					&:hover
+						background: lighten($blue, 10%)
 					.fa
-						display: table-cell
-						vertical-align: middle
-						text-align: center
+						margin: 0 rem(20)
+						font-size: rem(20)
+						text-align: right
+						text-shadow: 0 rem(1) 0 $blue-dark
 
-header.post
-	height: rem(400)
+section.about
+	position: relative
+	display: block
+	width: 100%
+	.card
+		position: absolute
+		display: block
+		top: 20%
+		padding: 0 rem(10)
+		border: rem(1) solid lighten($gray, 20%)
+		background: white
+		.title
+			font-size: rem(52)
+			font-weight: 100
+			display: block
+			font-weight: 100
+			color: $blue-dark
 
 section.post_list
 	display: block
@@ -83,10 +110,10 @@ section.post_list
 						display: block
 						text-decoration: none
 						font-weight: 100
-						color: $black
+						color: $blue-dark
 				time
 					display: block
-					margin-right: rem(10)
+					margin-bottom: rem(20)
 					color: $gray
 					text-align: center
 					.time_text
