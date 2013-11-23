@@ -4,6 +4,20 @@
 *
 	box-sizing: border-box
 
+h1, h2, h3, h4
+	font-family: $title
+	font-weight: 400
+
+a
+	text-decoration: none
+	color: $blue-dark
+	font-weight: 400
+
+p
+	font-family: $text
+	font-size: rem(20)
+	font-weight: 100
+
 img
 	max-width: 100%
 
@@ -34,6 +48,9 @@ header
 	&:hover
 		-webkit-transition: .25s all ease-out
 		-webkit-transform: translateX(rem(94))
+	@media (max-width: rem($tablet-landscape))
+		&:hover
+			-webkit-transform: none
 	@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)
 		position: relative
 		display: block
@@ -53,6 +70,11 @@ header
 	nav
 		display: block
 		width: 100%
+		margin-top: 50%
+		@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)
+			margin-top: 0
+		@media (max-width: rem($phone-landscape))
+			margin-top: 0
 		.menu
 			display: block
 			width: 100%
@@ -62,13 +84,13 @@ header
 				display: table
 				width: 100%
 				height: rem(60)
-
 				.link
 					display: table-cell
 					vertical-align: middle
 					width: 100%
 					height: 100%
 					text-decoration: none
+					font-family: $text
 					font-size: rem(12)
 					color: $white
 					background: $blue-dark
@@ -76,6 +98,7 @@ header
 					text-align: right
 					&:hover
 						background: lighten($blue, 10%)
+						background: transparentize($white, .8)
 					.fa
 						margin: 0 rem(20)
 						font-size: rem(20)
@@ -114,94 +137,69 @@ section.about
 	display: block
 	width: 100%
 	.container
-		width: rem(800)
-		margin: auto
-		@media (max-width: rem($tablet-portrait))
-			width: rem(550)
-		@media (max-width: rem($phone-landscape))
-			width: 100%
-
-	.card
-		position: absolute
-		display: block
-		top: 20%
-		padding: 0 rem(10)
-		border: rem(1) solid lighten($gray, 20%)
-		background: white
-		.title
-			font-size: rem(52)
-			font-weight: 100
+		.card
+			position: relative
 			display: block
-			font-weight: 100
-			color: $blue-dark
-
-section.post_list
-	display: block
-	position: relative
-	width: 100%
-	.post
-		margin-top: rem(20)
-		.post_description
-			display: inline-block
-			vertical-align: top
-			width: 100%
-			height: 100%
-			padding: 0 rem(10)
+			margin-top: 20%
+			padding: 0 rem(20)
 			border: rem(1) solid lighten($gray, 20%)
 			background: white
-			.title
-				margin-bottom: rem(10)
-				font-size: rem(52)
-				font-weight: 100
-				text-align: center
-				a
+			.about_pic
+				display: inline-block
+				vertical-align: top
+				width: 30%
+			.about_description
+				display: inline-block
+				vertical-align: top
+				width: 69%
+				.title
+					margin-top: rem(8)
+					font-size: rem(52)
+					font-weight: 100
 					display: block
-					text-decoration: none
 					font-weight: 100
 					color: $blue-dark
-			time
-				display: block
-				margin-bottom: rem(30)
-				color: $gray
-				text-align: center
-				.time_text
-					font-size: rem(12)
-			.excerpt
-				display: block
-				width: 100%
-
-		@media (max-width: rem($phone-landscape))
-			width: 94%
-			margin-left: 3%
-				
-
+				.text
+					font-size: rem(20)
+					font-weight: 100
+					font-family: $text
+					display: block
+					color: $black
+					a
+						text-decoration: none
 
 article.post
+	padding-bottom: rem(20)
+	border-bottom: rem(1) solid $gray
 	.title
 		display: block
-		margin-top: 0
-		padding: rem(40) rem(10)
+		margin: 0 auto
+		padding: rem(10) rem(10)
 		font-size: rem(52)
 		font-weight: 100
 		text-decoration: none
 		font-weight: 100
 		text-align: center
-		background: $blue
-		color: $white
-	time
+		color: $blue
+		a
+			color: $blue
+			font-family: $title
+	.info
 		display: block
-		margin-bottom: rem(20)
+		margin: 0 auto rem(48)
+		text-align: center
 		color: $gray
-		text-align: center
-		.time_text
+		time
+			display: inline-block
+			margin-bottom: rem(10)
+			text-align: center
+			.time_text
+				font-size: rem(12)
+		.category
+			display: inline-block
+			color: $gray
 			font-size: rem(12)
-	.excerpt
-		display: block
-		margin-bottom: rem(40)
-		font-size: rem(30)
-		text-align: center
-		color: $gray-dark
-		line-height: 130%
+			text-transform: uppercase
 	.content
 		display: block
 		width: 100%
@@ -219,10 +217,14 @@ article.post
 			text-decoration: none
 			color: $blue-dark
 			font-weight: 400
+			border-bottom: rem(2) solid transparent
+			&:hover
+				border-bottom: rem(2) solid $blue-dark
 		strong
 			font-weight: 100
 			color: $blue-dark
 		blockquote
+			margin: rem(22) rem(16)
 			font-size: rem(26)
 			line-height: 130%
 			font-style: italic
@@ -240,6 +242,19 @@ article.post
 				font-size: rem(14)
 				border: rem(1) solid darken($white, 10%)
 				white-space: nowrap
+		ul
+			li
+				color: $black
+		p.read_more
+			display: block
+			text-align: center
+			a
+				padding: rem(6) rem(10)
+				font-size: rem(12)
+				text-transform: uppercase
+				border: rem(1) solid $blue 
+				border-radius: rem(2)
+				box-shadow: 0 rem(1) rem(3) $blue
 
 
 

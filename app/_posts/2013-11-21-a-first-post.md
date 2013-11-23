@@ -3,7 +3,7 @@
 layout: post
 title: A First Post
 date: 2013-11-21 17:48
-excerpt: This is a post to check how the layout is going on. I hope it does well.
+category: off-topic
 
 ---
 
@@ -20,6 +20,8 @@ __Writing__ is a great way to consolidate our practising. Sometimes we only read
 There is where we start to write about some we've read to make it solid in mind.
 
 ## Another thing to mention
+
+<!--readmore-->
 
 While we write, we have others steps in that process like preparing the content and all that stuff.
 

@@ -35,35 +35,22 @@
           </nav>
       </header>
 
+      <div class="container">
+        
+      </div>
+
       <article class="post">
-        <h1 class="title">
           <div class="container">
-            {{ page.title }}
-          </div>  
-        </h1>
-      	<div class="container">
-            <time datetime="{{ page.date }}"><i class="fa fa-calendar-o"> </i> <span class="time_text"> {{ page.date | date: "%d/%m/%y" }}</span></time>
-             <p class="excerpt">
-                  {{ page.excerpt }}
-                </p>
-	        	<div class="content">
-	        		{{ content }}
-	        	</div>
-	            <div class="footer">
-	              <div class="contact">
-	                <p>
-	                  Andre Loureiro<br />
-	                  <a href="mailto:andreloureiroo@gmail.com">andreloureiroo@gmail.com</a>
-	                </p>
-	              </div>
-	              <div class="contact">
-	                <p>
-	                  <a href="http://github.com/andreloureiro/">github.com/andreloureiro</a><br />
-	                  <a href="http://twitter.com/anlo_/">twitter.com/anlo_</a><br />
-	                </p>
-	              </div>
-	            </div>
-	        </div> <!-- /container -->
+            <h1 class="title">
+              {{ page.title }}
+            </h1>
+            <p class="info">
+              <time datetime="{{ post.date }}"><i class="fa fa-calendar-o"> </i> <span class="time_text"> {{ page.date | date: "%d/%m/%y" }}</span></time> | <a class="category" href="/categories/#{{ page.category }}">{{ page.category }}</a>
+            </p>
+          <div class="content">
+            {{ page.content }}
+          </div>
+          </div>
       </article>
 
       <footer>
