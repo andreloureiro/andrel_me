@@ -35,7 +35,7 @@ I was ever a great fan of _Jekyll_, and lately I became a great fan of _Grunt_. 
     <li>Bower</li>
 </ul>
 
-{% highlight css %}
+{% highlight css linenos %}
 .class {
     display: block;
     position: absolute;
@@ -43,3 +43,5 @@ I was ever a great fan of _Jekyll_, and lately I became a great fan of _Grunt_. 
 {% endhighlight %}
 
 This block was just to test <a href="#another-thing-to-mention">Pygments</a>, now I need to test some inline code like <code>gem 'bootstrap'</code>
+
+{% gist andreloureiro/7771a1933262842ea780 %}

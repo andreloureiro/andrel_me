@@ -48,14 +48,12 @@
               <time datetime="{{ post.date }}"><i class="fa fa-calendar-o"> </i> <span class="time_text"> {{ page.date | date: "%d/%m/%y" }}</span></time> | <a class="category" href="/categories/#{{ page.category }}">{{ page.category }}</a>
             </p>
           <div class="content">
-            {{ page.content }}
+            {{ content }}
           </div>
           </div>
       </article>
 
-      <footer>
-              
-      </footer>
+    {% include footer.html %}
 
     <!-- build:js({app,.tmp}) /js/scripts.js -->
     <script src="/js/main.js"></script>
