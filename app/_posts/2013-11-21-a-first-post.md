@@ -19,14 +19,12 @@ __Writing__ is a great way to consolidate our practising. Sometimes we only read
 
 There is where we start to write about some we've read to make it solid in mind.
 
-## Another thing to mention
-
 <!--readmore-->
 
+## Another thing to mention
 While we write, we have others steps in that process like preparing the content and all that stuff.
 
 <h2 id="tools-that-made-this-website">Tools that made this website</h2>
-
 I was ever a great fan of _Jekyll_, and lately I became a great fan of _Grunt_. This is the stuff I used to made this website possible:
 
 <ul>
