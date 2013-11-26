@@ -1,8 +1,17 @@
 @import variables, mixins
 
+.button
+	padding: rem(6) rem(10)
+	font-size: rem(12)
+	text-transform: uppercase
+	background: $red
+	color: $white 
+	border-radius: rem(2)
+
 
 *
 	box-sizing: border-box
+	-moz-box-sizing: border-box
 
 h1, h2, h3, h4
 	font-family: $title
@@ -10,7 +19,7 @@ h1, h2, h3, h4
 
 a
 	text-decoration: none
-	color: $blue-dark
+	color: $red
 	font-weight: 400
 
 p
@@ -29,7 +38,7 @@ body
 	background: $white
 	width: 100%
 	.container
-		width: rem(800)
+		width: rem(740)
 		margin: auto
 		@media (max-width: rem($tablet-portrait))
 			width: 100%
@@ -38,194 +47,39 @@ body
 
 header
 	-webkit-transition: .25s all ease-out
-	position: fixed
-	top: 0
-	left: rem(-94)
-	width: rem(150)
-	height: 100%
-	background: $blue-dark
-	z-index: 300
-	&:hover
-		-webkit-transition: .25s all ease-out
-		-webkit-transform: translateX(rem(94))
-	@media (max-width: rem($tablet-landscape))
-		position: relative
-		display: block
-		width: 100%
-		left: 0
-		&:hover
-			-webkit-transform: none
-	@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)
-		position: relative
-		display: block
-		width: 100%
-		left: 0
-		&:hover
-			-webkit-transition: none
-			-webkit-transform: none
-	@media (max-width: rem($phone-landscape))
-		position: relative
-		display: block
-		width: 100%
-		left: 0
-		&:hover
-			-webkit-transition: none
-			-webkit-transform: none
-	nav
-		display: block
-		width: 100%
-		margin-top: 50%
-		@media (max-width: rem($tablet-landscape))
-			margin-top: 0
-		@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)
-			margin-top: 0
-		@media (max-width: rem($phone-landscape))
-			margin-top: 0
-		.menu
-			display: block
-			width: 100%
-			padding: 0
-			margin: 0
-			.item
-				display: table
-				width: 100%
-				height: rem(60)
-				.link
-					display: table-cell
-					vertical-align: middle
-					width: 100%
-					height: 100%
-					text-decoration: none
-					font-family: $text
-					font-size: rem(12)
-					color: $white
-					background: $blue-dark
-					text-transform: uppercase
-					text-align: right
-					&:hover
-						background: lighten($blue, 10%)
-						background: transparentize($white, .8)
-					.fa
-						margin: 0 rem(20)
-						font-size: rem(20)
-						text-align: right
-						text-shadow: 0 rem(1) 0 $blue-dark
-				@media (max-width: rem($tablet-landscape))
-					display: inline-table
-					width: 12.5%
-					margin-left: -4px
-					.link
-						font-size: rem(10)
-						text-align: center
-						padding: 0 20%
-				@media (max-width: rem($tablet-portrait))
-					width: 25%
-					margin-left: -4px
-					.link
-						padding: 0
-
-				@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)
-					display: inline-table
-					width: 24%
-					.link
-						font-size: rem(10)
-						text-align: center
-						padding: 0 rem(14)
-						.fa
-							margin: 0 rem(4)
-				@media (max-width: rem($phone-landscape))
-					display: inline-table
-					width: 24%
-					.link
-						font-size: rem(10)
-						text-align: center
-						padding: 0 rem(14)
-						.fa
-							margin: 0 rem(4)
-				@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)
-					.link
-						.fa
-							margin: 0 rem(14)
-				@media (max-width: rem($phone-portrait))
-					.link
-						.fa
-							margin: 0 rem(10)
-
-
-section.about
 	position: relative
-	display: block
 	width: 100%
-	.container
-		.card
-			position: relative
-			display: block
-			margin-top: rem(20)
-			padding: 0 rem(20)
-			background: white
-			.about_pic
-				display: block
-				position: relative
-				width: 100%
-				text-align: center
-				img
-					border-radius: 50%
-					overflow: hidden
-					border: rem(14) solid lighten($gray, 30%)
-			.about_description
-				display: block
-				width: 100%
-				.title
-					margin-top: rem(8)
-					font-size: rem(52)
-					font-weight: 100
-					display: block
-					font-weight: 100
-					color: $blue-dark
-					text-align: center
-				.text
-					font-size: rem(20)
-					font-weight: 100
-					font-family: $text
-					display: block
-					color: $black
-					a
-						text-decoration: none
+	padding: rem(20) 0
+	.link
+		display: block
+		text-decoration: none
+		font-family: $title
+		font-size: rem(12)
+		color: $blue
+		text-transform: uppercase
+		text-align: center
 
 article.post
 	padding: rem(20) 0
-	border-bottom: rem(1) solid $gray
+	border-bottom: rem(1) solid lighten($gray, 20%)
 	.title
 		display: block
 		margin: 0 auto
 		padding: rem(10) rem(10)
 		font-size: rem(60)
-		font-weight: 100
 		text-decoration: none
-		font-weight: 100
 		text-align: center
-		color: $blue
+		color: $red
 		a
-			color: $blue
+			color: $red
 			font-family: $title
-	.info
+	time
 		display: block
-		margin: 0 auto rem(48)
+		margin-bottom: rem(10)
 		text-align: center
+		font-size: rem(14)
 		color: $gray
-		time
-			display: inline-block
-			margin-bottom: rem(10)
-			text-align: center
-			.time_text
-				font-size: rem(12)
-		.fa
-			font-size: rem(14)
-		.category
-			display: inline-block
-			color: $gray
-			font-size: rem(12)
-			text-transform: uppercase
+		text-align: center
 	.content
 		display: block
 		width: 100%
@@ -236,7 +90,7 @@ article.post
 			color: $black
 		h1, h2, h3, h4, h5, h6
 			margin: rem(40) 0 0
-			color: $blue
+			color: $red
 			font-weight: 100
 			line-height: 150%
 		h1
@@ -248,13 +102,13 @@ article.post
 
 		a
 			text-decoration: none
-			color: $blue-dark
+			color: $red
 			font-weight: bold
 			border-bottom: rem(2) solid transparent
 			&:hover
-				border-bottom: rem(2) solid $blue-dark
+				border-bottom: rem(2) solid $red
 		strong
-			color: $blue-dark
+			color: $red
 		ul
 			padding-left: rem(20)
 			li
@@ -263,12 +117,12 @@ article.post
 				font-weight: 100
 				color: $black
 		blockquote
-			margin: rem(22) rem(16)
+			margin: rem(42) rem(16)
 			font-size: rem(26)
 			line-height: 130%
 			font-style: italic
 			font-weight: 100
-			color: $gray
+			color: lighten($black, 10%)
 			text-align: center
 		pre
 			padding: rem(5)
@@ -296,49 +150,81 @@ article.post
 			margin: rem(34) 0
 			text-align: center
 			a
-				padding: rem(6) rem(10)
-				font-size: rem(12)
-				text-transform: uppercase
-				// border: rem(1) solid $blue
-				background: $blue
-				color: $white 
-				border-radius: rem(2)
+				@extend .button
 
+.share
+	display: block
+	width: 100%
+	padding: rem(40) 0
+	text-align: center
+	.button
+		@extend .button
+		&.twitter
+			background: $blue
+		&.google_plus
+			background: $red
+		&.facebook
+			background: $blue-dark
 
-section.projects_list
-	article.project
-		padding: rem(20) 0
-		border-bottom: rem(1) solid $gray
-		.title
-			display: block
-			margin: 0 auto
-			padding: rem(10) rem(10)
-			font-family: $title
-			font-size: rem(60)
-			font-weight: 100
-			text-decoration: none
-			font-weight: 100
-			text-align: center
-			color: $blue
-		.info
-			display: block
-			margin: 0 auto rem(48)
-			text-align: center
-			color: $gray
-		p
-			font-size: rem(18)
-			color: $black
-		h1, h2, h3, h4, h5, h6
-			margin: rem(40) 0 0
-			color: $blue
-			font-weight: 100
-			line-height: 150%
-		h1
-			font-size: rem(38)
-		h2
-			font-size: rem(30)
-		h3, h4, h5, h6
-			font-size: rem(20)
+footer
+	display: block
+	width: 100%
+	padding: rem(40) 0
+	text-align: center
+	.me
+		display: block
+		width: rem(200)
+		height: rem(200)
+		margin: auto
+		background: url(/img/me.jpg) center center no-repeat
+		border: rem(14) solid lighten($gray, 30%)
+		border-radius: 50%
+		overflow: hidden
+	.title
+		font-family: $title
+		color: $red
+		font-size: rem(34)
+	.text
+		width: 80%
+		margin: 0 auto rem(20)
+		font-family: $text
+		font-size: rem(16)
+		color: $black
+
+// section.projects_list
+// 	article.project
+// 		padding: rem(20) 0
+// 		border-bottom: rem(1) solid $gray
+// 		.title
+// 			display: block
+// 			margin: 0 auto
+// 			padding: rem(10) rem(10)
+// 			font-family: $title
+// 			font-size: rem(60)
+// 			font-weight: 100
+// 			text-decoration: none
+// 			font-weight: 100
+// 			text-align: center
+// 			color: $blue
+// 		.info
+// 			display: block
+// 			margin: 0 auto rem(48)
+// 			text-align: center
+// 			color: $gray
+// 		p
+// 			font-size: rem(18)
+// 			color: $black
+// 		h1, h2, h3, h4, h5, h6
+// 			margin: rem(40) 0 0
+// 			color: $blue
+// 			font-weight: 100
+// 			line-height: 150%
+// 		h1
+// 			font-size: rem(38)
+// 		h2
+// 			font-size: rem(30)
+// 		h3, h4, h5, h6
+// 			font-size: rem(20)
 
 
 

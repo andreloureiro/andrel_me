@@ -9,19 +9,18 @@
 
       {% include header.html %}
 
-      <article class="post">
-          <div class="container">
-            <h1 class="title">
-              {{ page.title }}
-            </h1>
-            <p class="info">
-              <time datetime="{{ page.date }}"><i class="fa fa-calendar"> </i> <span class="time_text"> {{ page.date | date: "%d/%m/%y" }}</span></time> | <i class="fa fa-tag"></i> <a class="category" href="/categories/#{{ page.category }}"> {{ page.category }}</a>
-            </p>
+      <div class="container">
+        <article class="post">
+          <h1 class="title">{{ page.title }}</h1>
+          <time datetime="{{ page.date }}">{{ page.date | date: "%d/%m/%y" }}</time>
+          <br>
           <div class="content">
             {{ content }}
           </div>
-          </div>
-      </article>
+        </article>
+      </div>
+
+      {% include share.html %}
 
     {% include footer.html %}
 
