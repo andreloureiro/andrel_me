@@ -7,6 +7,17 @@
 	background: $red
 	color: $white 
 	border-radius: rem(2)
+	white-space: nowrap
+	@media (max-width: rem($phone-landscape))
+		width: 90%
+		display: block
+		margin: auto
+		padding: rem(20) rem(10)
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+		width: 90%
+		display: block
+		margin: rem(10) auto
+		padding: rem(20) rem(10)
 
 
 *
@@ -40,10 +51,13 @@ body
 	.container
 		width: rem(740)
 		margin: auto
-		@media (max-width: rem($tablet-portrait))
-			width: 100%
 		@media (max-width: rem($phone-landscape))
 			width: 100%
+			padding: 0 2%
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+			width: 100%
+			padding: 0 2%
+
 
 header
 	-webkit-transition: .25s all ease-out
@@ -180,6 +194,9 @@ footer
 		border: rem(14) solid lighten($gray, 30%)
 		border-radius: 50%
 		overflow: hidden
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+			background: url(/img/me@2x.jpg) center center no-repeat rem(200) rem(200)
+			// background: 
 	.title
 		font-family: $title
 		color: $red
