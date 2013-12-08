@@ -25,17 +25,26 @@
       {% include header.html %}
 
       <div class="container">
-        <article class="post">
-          <h1 class="title" itemprop="name">{{ page.title }}</h1>
-          <time datetime="{{ page.date }}" itemprop="dateCreated">{{ page.date | date: "%d/%m/%y" }}</time>
-          <br>
-          <div class="content" itemprop="articleBody">
-            {{ content }}
-          </div>
-        </article>
+        <div class="container_post">
+          <article class="post">
+            <h1 class="title" itemprop="name">{{ page.title }}</h1>
+            <time datetime="{{ page.date }}" itemprop="dateCreated">{{ page.date | date: "%d/%m/%y" }}</time>
+            <br>
+            <div class="content" itemprop="articleBody">
+              {{ content }}
+            </div>
+          </article>
+          {% include share.html %}
+        </div>
+        <div class="container_about">
+          <div class="me"></div>
+          <h1 class="title">Hi! I'm <span itemprop="author">Andre Loureiro</span></h1>
+          <p class="text">I'm a Front-End Developer @ <a href="http://opus-software.com.br" target="_blank">Opus Software</a>, graduated in Graphic Design @ <a href="http://unip.br" target="_blank">UNIP.</a></p>
+          <p class="text" itemprop="genre">Here you will find some stuff about Front-End Development, Responsive Web Design, Performance improvements, soccer and etc.</p>
+        </div>
       </div>
 
-      {% include share.html %}
+      
 
     {% include footer.html %}
 

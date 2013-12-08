@@ -49,14 +49,49 @@ body
 	background: $white
 	width: 100%
 	.container
-		width: rem(740)
+		width: rem(1100)
 		margin: auto
+		@media (max-width: rem($tablet-landscape))
+			width: 100%
+			padding: 0 2%
+		@media (max-width: rem($tablet-portrait))
+			width: 100%
+			padding: 0 5%
 		@media (max-width: rem($phone-landscape))
 			width: 100%
 			padding: 0 2%
+		@media (max-width: rem($phone-portrait))
 		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
 			width: 100%
 			padding: 0 2%
+
+		.container_post
+			width: 65%
+			display: inline-block
+			vertical-align: top
+			margin: auto
+			@media (max-width: rem($tablet-landscape))
+			@media (max-width: rem($tablet-portrait))
+				width: 100%
+			@media (max-width: rem($phone-landscape))
+			@media (max-width: rem($phone-portrait))
+			@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+				width: 100%
+
+		.container_about
+			width: 34%
+			padding-left: 5%
+			display: inline-block
+			vertical-align: top
+			margin: auto
+			@media (max-width: rem($tablet-landscape))
+			@media (max-width: rem($tablet-portrait))
+				width: 100%
+			@media (max-width: rem($phone-landscape))
+			@media (max-width: rem($phone-portrait))
+			@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+				width: 100%
+
 
 
 header
@@ -74,38 +109,44 @@ header
 		text-align: center
 
 article.post
-	padding: rem(20) 0
 	border-bottom: rem(1) solid lighten($gray, 20%)
 	.title
 		display: block
 		margin: 0 auto
-		padding: rem(10) rem(10)
+		padding: rem(10) 0
 		font-size: rem(60)
 		text-decoration: none
-		text-align: center
+		text-align: left
 		color: $red
 		a
 			color: $red
 			font-family: $title
+		@media (max-width: rem($phone-landscape))
+			font-size: rem(40)
+		@media (max-width: rem($phone-portrait))
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+			font-size: rem(40)
+
 	time
 		display: block
 		margin-bottom: rem(10)
 		text-align: center
-		font-size: rem(14)
+		font-size: rem(12)
 		color: $gray
-		text-align: center
+		text-align: left
+		text-transform: uppercase
 	.content
 		display: block
 		width: 100%
-		line-height: 150%
-		padding: 0 rem(10)
+		line-height: 1.5
 		p
 			font-size: rem(18)
+			font-weight: 300
 			color: $black
 		h1, h2, h3, h4, h5, h6
 			margin: rem(40) 0 0
 			color: $red
-			font-weight: 100
+			font-weight: 400
 			line-height: 150%
 		h1
 			font-size: rem(38)
@@ -117,27 +158,29 @@ article.post
 		a
 			text-decoration: none
 			color: $red
-			font-weight: bold
+			font-weight: 400
 			border-bottom: rem(2) solid transparent
 			&:hover
 				border-bottom: rem(2) solid $red
 		strong
 			color: $red
+			font-weight: 400
 		ul
 			padding-left: rem(20)
 			li
 				font-family: $text
 				font-size: rem(18)
-				font-weight: 100
+				font-weight: 400
 				color: $black
 		blockquote
 			margin: rem(42) rem(16)
-			font-size: rem(26)
+			font-size: rem(30)
 			line-height: 130%
 			font-style: italic
-			font-weight: 100
+			font-weight: 200
 			color: lighten($black, 10%)
 			text-align: center
+
 		pre
 			padding: rem(5)
 			border: rem(1) solid lighten($gray, 25%)
@@ -159,6 +202,8 @@ article.post
 		ul
 			li
 				color: $black
+				font-weight: 300
+				font-style: rem(20)
 		p.read_more
 			display: block
 			margin: rem(34) 0
