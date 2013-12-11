@@ -5,17 +5,16 @@
         {% include head.html %}
 
         <!-- Facebook -->
-        <meta property=”og:title” content=”{{ page.title }}”/>
-        <meta property=”og:type” content=”article”/>
-        <!-- <meta property=”og:image” content=”http://www.iacquire.com/some-thumbnail.jpg”/> -->
-        <meta property=”og:url” content=”http://andrel.me{{ page.url }}”/>
-        <meta property=”og:description” content=”{{ content  | strip_html | truncatewords: 290 }}”/>
-        <meta property="fb:admins" content="100000469508451" />
+        <meta property="og:title" content="{{ page.title }}">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="http://andrel.me{{ page.url }}">
+        <meta property="og:description" content="{{ content | strip_html | truncatewords: 190 }}">
+        <meta property="fb:admins" content="100000469508451">
 
-        <meta name=”twitter:card” content=”summary”>
-        <meta name=”twitter:url” content=”http://andrel.me{{ page.url }}”>
-        <meta name=”twitter:title” content=”{{ page.title }}”>
-        <meta name=”twitter:description” content=”{{ content  | strip_html | truncatewords: 190 }}”>
+        <meta name="twitter:card" content="sumary">
+        <meta name="twitter:url" content="http://andrel.me{{ page.url }}">
+        <meta name="twitter:title" content="{{ page.title }}">
+        <meta name="twitter:description" content="{{ content | strip_html | truncatewords: 190 }}">
         <!-- <meta name=”twitter:image” content=”http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg”> -->
 
 
@@ -37,10 +36,9 @@
           {% include share.html %}
         </div>
         <div class="container_about">
-          <div class="me"></div>
-          <h1 class="title">Hi! I'm <span itemprop="author">Andre Loureiro</span></h1>
-          <p class="text">I'm a Front-End Developer @ <a href="http://opus-software.com.br" target="_blank">Opus Software</a>, graduated in Graphic Design @ <a href="http://unip.br" target="_blank">UNIP.</a></p>
-          <p class="text" itemprop="genre">Here you will find some stuff about Front-End Development, Responsive Web Design, Performance improvements, soccer and etc.</p>
+          
+          {% include about.html %}
+
         </div>
       </div>
 
@@ -49,7 +47,6 @@
     {% include footer.html %}
 
     <!-- build:js({app,.tmp}) /js/scripts.js -->
-    <script src="/js/main.js"></script>
     <script src="/js/app.js"></script>
     <!-- endbuild -->
     </body>

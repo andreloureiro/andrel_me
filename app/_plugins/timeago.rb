@@ -4,20 +4,20 @@ module Jekyll
   module Timeago
 
     DAYS_PER = {
-      :days => 1,
-      :weeks => 7,
-      :months => 31,
-      :years => 365,
+      :dias => 1,
+      :semanas => 7,
+      :meses => 31,
+      :anos => 365,
     }
 
     # Max level of detail
     # years > months > weeks > days
     # 1 year and 7 months and 2 weeks and 6 days
-    MAX_DEPTH_LEVEL = 4
+    MAX_DEPTH_LEVEL = 1
 
     # Default level of detail
     # 1 month and 5 days, 3 weeks and 2 days, 2 years and 6 months
-    DEFAULT_DEPTH_LEVEL = 2
+    DEFAULT_DEPTH_LEVEL = 1
 
     def timeago(input, depth = DEFAULT_DEPTH_LEVEL)
       unless depth_allowed?(depth)
@@ -47,7 +47,7 @@ module Jekyll
       if future
         "in #{sentence}"
       else
-        "#{sentence} ago"
+        "#{sentence} atrás"
       end
     end
 
@@ -76,13 +76,13 @@ module Jekyll
     def days_to_time_range(days_passed)
       case days_passed.abs
       when 0...7
-        :days
+        :dias
       when 7...31
-        :weeks
+        :semanas
       when 31...365
-        :months
+        :meses
       else
-        :years
+        :anos
       end
     end
 

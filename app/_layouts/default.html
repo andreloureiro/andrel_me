@@ -5,16 +5,16 @@
       {% include head.html %}
 
       <!-- Facebook -->
-      <meta property=”og:title” content=”Andre Loureiro”/>
-      <meta property=”og:type” content=blog/>
+      <meta property="og:title" content="Andre Loureiro">
+      <meta property="og:title" content="blog">
+      <meta property="og:url" content="http://andrle.me">
+      <meta property="og:description" content="Im a Front-End Developer @ Opus Software, graduated in Graphic Design @ UNIP. Here you will find some stuff about Front-End Development, Responsive Web Design, Performance improvements, soccer and etc.">
       <!-- <meta property=”og:image” content=”http://www.iacquire.com/some-thumbnail.jpg”/> -->
-      <meta property=”og:url” content=”http://andrel.me”/>
-      <meta property=”og:description” content="Im a Front-End Developer @ Opus Software, graduated in Graphic Design @ UNIP. Here you will find some stuff about Front-End Development, Responsive Web Design, Performance improvements, soccer and etc."/>
 
-      <meta name=”twitter:card” content=”summary”>
-      <meta name=”twitter:url” content=”http://andrel.me{”>
-      <meta name=”twitter:title” content=”Andre Loureiro”>
-      <meta name=”twitter:description” content=”Im a Front-End Developer @ Opus Software, graduated in Graphic Design @ UNIP. Here you will find some stuff about Front-End Development, Responsive Web Design, Performance improvements, soccer and etc.”>
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:url" content="http://andrel.me">
+      <meta name="twitter:title" content="Andre Loureiro">
+      <meta name="twitter:description" content="Meu nome é André Loureiro, sou desenvolvedor Front-End na Opus Software. Aqui você vai encontrar algumas coisas sobre desenvolvimento Front-End, Design Responsivo, Performance, futebol e etc.">
       <!-- <meta name=”twitter:image” content=”http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg”> -->
 
     </head>
@@ -23,18 +23,17 @@
       {% include header.html %}
 
       <div class="container">
-        <div class="container_blog">
+        <div class="container_post">
           {{ content }}
         </div>
         <div class="container_about">
-          oi oi oi
+          {% include about.html %}
         </div>
       </div>
 
       {% include footer.html %}
 
     <!-- build:js({app,.tmp}) /js/scripts.js -->
-    <script src="/js/main.js"></script>
     <script src="/js/app.js"></script>
     <!-- endbuild -->
     </body>
