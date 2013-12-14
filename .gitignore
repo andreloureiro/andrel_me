@@ -37,3 +37,6 @@ app/_bower_components
 dist
 node_modules
 .tmp
+
+# Ignore s3_website.yml to protect AWS keys
+s3_website.yml

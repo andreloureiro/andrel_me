@@ -1,5 +1,10 @@
 ---
-s3_id: AKIAJMBDAUBMTWEWCC4A
-s3_secret: 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
+s3_id: AKIAI7QVWBUVYTBITOXA
+s3_secret: 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
 s3_bucket: andrel.me
-cloudfront_distribution_id: E1CZGE6W0CJJZI
+s3_endpoint: sa-east-1
+cloudfront_distribution_id: E1W51XPA2H6RDU
+
+max_age: 604800
+
+gzip: [.css, .js]

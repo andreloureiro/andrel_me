@@ -371,6 +371,106 @@ module.exports = function (grunt) {
         'coffee:dist',
         'copy:dist'
       ]
+    },
+    // aws: grunt.file.readJSON('~/grunt-aws.json'),
+    s3: {
+      options: {
+        key: 'AKIAIDSOBKSATGRVSUHA',
+        secret: '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',
+        bucket: 'andrel.me',
+        region: 's3-sa-east-1',
+        access: 'public-read',
+        headers: {
+          // Two Year cache policy (1000 * 60 * 60 * 24 * 730)
+          "Cache-Control": "max-age=630720000, public",
+          "Expires": new Date(Date.now() + 63072000000).toUTCString()
+        }
+      },
+      dev: {
+        // These options override the defaults
+        options: {
+          encodePaths: true,
+          maxOperations: 20
+        },
+        // Files to be uploaded.
+        // upload: [
+        //   {
+        //     src: 'important_document.txt',
+        //     dest: 'documents/important.txt',
+        //     options: { gzip: true }
+        //   },
+        //   {
+        //     src: 'passwords.txt',
+        //     dest: 'documents/ignore.txt',
+
+        //     // These values will override the above settings.
+        //     options: {
+        //       bucket: 'some-specific-bucket',
+        //       access: 'authenticated-read'
+        //     }
+        //   },
+        //   {
+        //     // Wildcards are valid *for uploads only* until I figure out a good implementation
+        //     // for downloads.
+        //     src: 'documents/*.txt',
+
+        //     // But if you use wildcards, make sure your destination is a directory.
+        //     dest: 'documents/'
+        //   }
+        // ]
+        // ,
+        upload: [
+          {
+            src: 'dist/*',
+            dest: '',
+            rel: 'dist/'
+          }
+        ]
+
+        // Files to be downloaded.
+        // download: [
+        //   {
+        //     src: 'documents/important.txt',
+        //     dest: 'important_document_download.txt'
+        //   },
+        //   {
+        //     src: 'garbage/IGNORE.txt',
+        //     dest: 'passwords_download.txt'
+        //   }
+        // ],
+
+        // del: [
+        //   {
+        //     src: 'documents/launch_codes.txt'
+        //   },
+        //   {
+        //     src: 'documents/backup_plan.txt'
+        //   }
+        // ],
+
+        // sync: [
+        //   {
+        //     // only upload this document if it does not exist already
+        //     src: 'important_document.txt',
+        //     dest: 'documents/important.txt',
+        //     options: { gzip: true }
+        //   },
+        //   {
+        //     // make sure this document is newer than the one on S3 and replace it
+        //     options: { verify: true },
+        //     src: 'passwords.txt',
+        //     dest: 'documents/ignore.txt'
+        //   },
+        //   {
+        //     src: path.join(variable.to.release, "build/cdn/js/**/*.js"),
+        //     dest: "jsgz",
+        //     // make sure the wildcard paths are fully expanded in the dest
+        //     rel: path.join(variable.to.release, "build/cdn/js"),
+        //     options: { gzip: true }
+        //   }
+        // ]
+      }
+
     }
   });
 
