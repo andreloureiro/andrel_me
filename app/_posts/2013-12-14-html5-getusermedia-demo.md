@@ -8,7 +8,7 @@ published: true
 
 ---
 
-![HTML5 getUserMedia](img/posts/html5-getusermedia.png)
+![HTML5 getUserMedia](/img/posts/html5-getusermedia.png)
 
 Criei uma demo da utilização da API getUserMedia do HTML5. Essa API permite o acesso à câmera e microfone do dispositivo. Segundo o [CanIUse](http://caniuse.com/#feat=stream), a API é suportada no Chrome (todos os devices), Firefox e (pasmem) no browser do Blackberry OS 10!
 
