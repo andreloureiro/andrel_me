@@ -13,8 +13,7 @@ Há alguns dias atrás descobri o [Myth](http://www.myth.io), que é chamado no 
 Hoje temos que ter muito cuidado ao escrever nosso CSS devido à inconsistência de compatibilidade de browsers. O [Can I Use](http://caniuse.com) com certeza é uma ferramenta indispensável dentro do workflow de muitos desenvolvedores front-end. O *Myth* vem para resolver dois problemas de uma vez:
 
 * __Adequar o suporte do seu código aos vários browsers disponíveis:__ o Myth lê todo o seu código CSS e inclui tudo que for necessário para que ele funcione em todos os browsers, desde que a propriedade ou função CSS tenha sido implementada para o browser em questão;
-* __Utilizar o CSS do futuro, hoje:__ Com o Myth, podemos usar a sintaxe que está em implementação ou que ainda é apenas especificação. Assim, não 
-* perdemos tempo, e podemos aprender desde já.
+* __Utilizar o CSS do futuro, hoje:__ Com o Myth, podemos usar a sintaxe que está em implementação ou que ainda é apenas especificação. Assim, não perdemos tempo, e podemos aprender desde já.
 
 
 ## Instalação
