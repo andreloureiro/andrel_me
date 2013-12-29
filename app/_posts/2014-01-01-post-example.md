@@ -7,3 +7,5 @@ category: example
 published: false
 
 ---
+
+<!--readmore-->
