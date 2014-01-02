@@ -524,8 +524,8 @@ module.exports = function (grunt) {
     'imagemin',
     'svgmin',
     'rev',
-    'usemin',
-    'htmlmin'
+    'usemin'
+    // 'htmlmin'
     ]);
 
   grunt.registerTask('default', [

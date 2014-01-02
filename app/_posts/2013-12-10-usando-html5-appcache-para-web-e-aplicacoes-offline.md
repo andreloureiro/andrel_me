@@ -3,7 +3,13 @@
 layout: post
 title: Usando HTML5 AppCache para Web e aplicações offline
 date: 2013-12-12 18:12
-category: HTML5
+<!-- category: HTML5 -->
+categories:
+- HTML5
+- offline
+- AppCache
+- mobile
+- manifest
 published: true
 
 ---

@@ -9,12 +9,12 @@
 	border-radius: rem(2)
 	white-space: nowrap
 	@media (max-width: rem($phone-landscape))
-		width: 90%
+		width: 100%
 		display: block
 		margin: auto
 		padding: rem(20) rem(10)
 	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-		width: 90%
+		width: 100%
 		display: block
 		margin: rem(10) auto
 		padding: rem(20) rem(10)
@@ -50,62 +50,27 @@ body
 	background: $white
 	width: 100%
 	.container
-		width: rem(1100)
+		width: rem(700)
 		margin: auto
 		@media (max-width: rem($tablet-landscape))
-			width: 100%
 			padding: 0 2%
 		@media (max-width: rem($tablet-portrait))
-			width: 100%
 			padding: 0 5%
 		@media (max-width: rem($phone-landscape))
 			width: 100%
-			padding: 0 2%
+			// padding: 0 2%
 		@media (max-width: rem($phone-portrait))
 		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
 			width: 100%
-			padding: 0 2%
-
-		.container_post
-			width: 65%
-			display: inline-block
-			vertical-align: top
-			margin: auto
-			@media (max-width: rem($tablet-landscape))
-			@media (max-width: rem($tablet-portrait))
-				width: 100%
-			@media (max-width: rem($phone-landscape))
-			@media (max-width: rem($phone-portrait))
-			@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-				width: 100%
-
-		.container_about
-			width: 34%
-			padding-left: 5%
-			display: inline-block
-			vertical-align: top
-			margin: auto
-			@media (max-width: rem($tablet-landscape))
-			@media (max-width: rem($tablet-portrait))
-				padding: rem(30) 0
-				width: 100%
-			@media (max-width: rem($phone-landscape))
-				padding: 0 2%
-			@media (max-width: rem($phone-portrait))
-				padding: 0 2%
-			@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-				width: 100%
-				padding: 0 2%
-
-
+			// padding: 0 2%
 
 header
 	-webkit-transition: .25s all ease-out
 	position: relative
 	width: 100%
 	padding: rem(20) 0
+	text-align: center
 	.link
-		display: block
 		text-decoration: none
 		font-family: $title
 		font-size: rem(12)
@@ -114,8 +79,6 @@ header
 		text-align: center
 
 article.post
-	border-bottom: rem(1) solid lighten($gray, 20%)
-	padding: rem(20)
 	.title
 		display: block
 		margin: 0 auto
@@ -133,7 +96,7 @@ article.post
 		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
 			font-size: rem(40)
 
-	time
+	time, .author
 		display: block
 		margin-bottom: rem(10)
 		text-align: center
@@ -141,6 +104,9 @@ article.post
 		color: $gray
 		text-align: left
 		text-transform: uppercase
+		text-align: center
+	.author
+		font-size: rem(14)
 	.content
 		display: block
 		width: 100%
@@ -224,53 +190,25 @@ article.post
 				display: block
 				margin: auto
 
-.about
-	.me
-		display: block
-		width: rem(220)
-		height: rem(220)
-		margin: auto
-		margin-bottom: rem(20)
-		border: rem(14) solid lighten($gray, 22%)
-		border-radius: 50%
-		overflow: hidden
-		text-align: center
+.related
+	display: block
+	width: 100%
 	.title
-		font-family: $title
-		color: $red
+		margin-bottom: rem(14)
+		padding: rem(6) rem(10)
+		background: $red
 		font-size: rem(14)
-		text-align: left
-		h1
-			display: inline-block
-			font-size: rem(14)
-	.text
-		display: block
-		font-family: $text
-		font-size: rem(16)
-		color: $black
-		strong
-			font-weight: 400
-			color: $red
-	.social
-		display: block
-		text-align: center
-		a
-			margin: 0 rem(10)
+		color: $white
+		text-transform: uppercase
+	.list
+		margin: 0
+		margin-bottom: rem(40)
+		padding: 0
+		.item
+			margin-bottom: rem(14)
+			list-style-type: none
 			.fa
-				padding: rem(10)
-				border-radius: 50%
-			.fa-twitter
-				color: $twitter
-				background: lighten($twitter, 14%)
-				// text-shadow: 0 rem(1) 0 darken($twitter, 10%)
-			.fa-google-plus
-				color: $gplus
-				background: lighten($gplus, 14%)
-				// text-shadow: 0 rem(1) 0 darken($gplus, 10%)
-			.fa-envelope
-				color: $mail
-				background: lighten($mail, 22%)
-				// text-shadow: 0 rem(1) 0 darken($mail, 10%)
+				margin-right: rem(10)
 
 .share
 	display: block
@@ -279,6 +217,7 @@ article.post
 	text-align: center
 	.button
 		@extend .button
+		margin: 0
 		&.twitter
 			background: $blue
 		&.google_plus
@@ -287,6 +226,9 @@ article.post
 			background: $blue-dark
 		@media (max-width: rem($tablet-portrait))
 			margin-bottom: rem(10)
+		.fa
+			margin-right: rem(6)
+			font-size: rem(14)
 
 footer
 	display: block

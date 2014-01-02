@@ -3,7 +3,12 @@
 layout: post
 title: API HTML5 getUserMedia
 date: 2013-12-14 13:17
-category: html5
+<!-- category: HTML5 -->
+categories:
+- HTML5 
+- getUserMedia 
+- camera 
+- audio 
 published: true
 
 ---
