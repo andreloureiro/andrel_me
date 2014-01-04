@@ -8,7 +8,8 @@ categories:
 - HTML5 
 - getUserMedia 
 - camera 
-- audio 
+- audio
+keywords: desenvolvimento front-end client html5 css3 javascript js andre loureiro andrel anlo anlo_ rwd design responsivo getusermedia camera audio video
 published: true
 
 ---

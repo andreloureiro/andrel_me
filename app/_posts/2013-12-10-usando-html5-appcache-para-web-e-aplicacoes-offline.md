@@ -10,7 +10,7 @@ categories:
 - AppCache
 - mobile
 - manifest
-keywords: HTML5 API offline AppCache mobile cache manifest
+keywords: desenvolvimento front-end client html5 css3 javascript js andre loureiro andrel anlo anlo_ rwd design responsivo HTML5 API offline AppCache mobile cache manifest
 published: true
 
 ---
