@@ -10,6 +10,7 @@ categories:
 - AppCache
 - mobile
 - manifest
+keywords: HTML5 API offline AppCache mobile cache manifest
 published: true
 
 ---
