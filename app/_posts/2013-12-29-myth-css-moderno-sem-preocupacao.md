@@ -33,7 +33,7 @@ A instalação é bem simples, já que o Myth está disponível como um package 
 
 Após isso, instale o Myth pela linha de comando:
 
-{% highlight text %}
+{% highlight bash %}
 npm install -g myth
 {% endhighlight %}
 
@@ -75,13 +75,13 @@ div.background {
 
 E para fazer a mágica acontecer, basta utilizar a linha de comando:
 
-{% highlight text %}
+{% highlight bash %}
 myth input.css output.css
 {% endhighlight %}
 
 Na linha, o `input.css` é o meu arquivo original, e o `output.css` (ou qualquer nome que você queira) é o nome do arquivo que o Myth vai gerar para mim. E caso que você queira que o Myth observe qualquer alteração no seu arquivo e compile automaticamente, você pode usar a linha de comando:
 
-{% highlight text %}
+{% highlight bash %}
 myth --watch input.css output.css
 {% endhighlight %}
 

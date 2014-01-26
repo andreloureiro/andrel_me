@@ -6,14 +6,22 @@
 # Use _config.build.yml to override these settings on `grunt build`.
 
 name: Andre Loureiro
-description: Meu nome é André Loureiro e sou desenvolvedor Front-End na Opus Software. Aqui você vai encontrar algumas coisas sobre desenvolvimento FrontEnd Design Responsivo Performance futebol e etc.
+description: 'Meu nome é André Loureiro, sou desenvolvedor Front-End na Opus Software. Aqui você vai encontrar algumas coisas sobre desenvolvimento Front-End, Design Responsivo, Performance, futebol e etc.'
 url: http://andrel.me
 
 author:
   name: Andre Loureiro
   email: andreloureiroo@gmail.com
-  github: andreloureiro
-  twitter: anlo_
+
+social:
+  twitter: http://twitter.com/anlo_
+  twitter_username: anlo_
+  facebook: http://facebook.com/andreloureiroo
+  facebook_username: andreloureiroo
+  facebook_insights_id: 100000469508451
+  github: http://github.com/andreloureiroo
+  github_username: andreloureiro
+  plus: http://plus.google.com/+andreloureiroo
 
 # Exclude directories and/or files from the conversion.
 # Grunt moves image files and asset directories.

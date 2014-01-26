@@ -1,5 +1,5 @@
 <div class="share">
-	<a href="http://twitter.com/share?url=http://andrel.me{{ page.url }}" class="twitter button"><i class="fa fa-twitter"></i> TWEET</a>
+	<a href="http://twitter.com/intent/tweet?text={{ page.title | stringtourl }}&url={{site.url}}{{page.url}}&via=anlo_" class="twitter button"><i class="fa fa-twitter"></i> TWEET</a>
 	<a href="https://plus.google.com/share?url=http://andrel.me{{ page.url }}" class="google_plus button"><i class="fa fa-google-plus"></i> +1</a>
-	<a href="http://www.facebook.com/sharer.php?u=http://andrel.me{{ page.url }}" class="facebook button"><i class="fa fa-facebook"></i> SHARE</a>
+	<a href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" class="facebook button"><i class="fa fa-facebook"></i> SHARE</a>
 </div>

@@ -1,66 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <head>
-
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta charset="utf-8">
-        <title>{{ page.title }}</title>
-        <meta name="description" content="{{ content | strip_html | truncatewords: 190 }}">
-        <meta name="keywords" content="{{ page.keywords }}">
-        <meta name="viewport" content="width=device-width">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="mobile-web-app-capable" content="yes">
-        <link rel="shortcut icon" sizes="196x196" href="img/icon_196.png">
-        <link rel="shortcut icon" sizes="128x128" href="img/icon_128.png">
-        <link rel="apple-touch-icon" sizes="128x128" href="img/icon_128.png">
-        <link rel="apple-touch-icon-precomposed" sizes="128x128" href="img/icon_128.png">
-
-        <!-- build:css({app,.tmp}) /css/main.css -->
-        <!-- Syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/_bower_components/normalize-css/normalize.css">
-        <link rel="stylesheet" href="/_bower_components/font-awesome/css/font-awesome.css">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,900,200italic,400italic,600italic,900italic' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="/css/main.css">
-        <link rel="stylesheet" href="/css/app.css">
-        <!-- endbuild -->
-
-        <!-- Google Plus -->
-        <link rel=”author” href=”https://plus.google.com/+AndreLoureiroo“/>
-
-
-
-        <!-- Facebook -->
-        <meta property="og:title" content="{{ page.title }}">
-        <meta property="og:type" content="article">
-        <meta property="og:url" content="http://andrel.me{{ page.url }}">
-        <meta property="og:description" content="{{ content | strip_html | truncatewords: 190 }}">
-        <meta property="fb:admins" content="100000469508451">
-
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:url" content="http://andrel.me{{ page.url }}">
-        <meta name="twitter:title" content="{{ page.title }}">
-        <meta name="twitter:description" content="{{ content | strip_html | truncatewords: 190 }}">
-        <!-- <meta name=”twitter:image” content=”http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg”> -->
-
-
-    </head>
+    {% include head.html %}
     <body itemscope itemtype="http://schema.org/Article">
 
       {% include header.html %}
 
       <div class="container">
-        <hr>
           <article class="post">
-            <h1 class="title" itemprop="name">{{ page.title }}</h1>
-            <p class="author">POR <span itemprop="author">ANDRE LOUREIRO</span></p><time datetime="{{ page.date }}" itemprop="dateCreated"><i class="fa fa-calendar"> </i> {{ page.date | timeago }}</time>
+            <h1 class="post__title" itemprop="name">{{ page.title }}</h1>
+            <p class="post__author">POR <span itemprop="author">ANDRE LOUREIRO</span></p><time class="post__time" datetime="{{ page.date }}" itemprop="dateCreated">{{ page.date | timeago }}</time>
             <br>
-            <div class="content" itemprop="articleBody">
+            <div class="post__content" itemprop="articleBody">
               {{ content }}
             </div>
           </article>
+          {% include share.html %}
           <div class="related">
 
                 {% if site.related_posts.size >= 1 %}
@@ -75,11 +29,9 @@
                       </ul>
                 {% endif %}
           </div>
-
-          {% include share.html %}
       </div>
 
-      
+      {% include about.html %}
 
     {% include footer.html %}
 
