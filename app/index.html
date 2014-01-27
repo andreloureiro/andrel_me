@@ -6,9 +6,8 @@ title: Andre Loureiro
 {% for post in site.posts %}
 	<article class="post">
 		{% if post.featured_image %}
-		<a href="{{ post.url }}">
-			<img src="{{ post.featured_image }}" alt="{{ post.title }}">
-		</a>
+		<div class="post__featured-image" style="background-image:url({{ post.featured_image }})">
+		</div>
 		{% endif %}
 		<h1 class="post__title"><a href="{{ post.url }}" class="title--link">{{ post.title }}</a></h1>
 		<!-- <time datetime="{{ post.date }}">{{ post.date | localize: "%d de %B de %Y" }}</time> -->
@@ -18,4 +17,5 @@ title: Andre Loureiro
 			{{ post.content | readmore: post.url, 'Veja mais' }}
 		</div>
 	</article>
+	<div class="post__divisor"></div>
 {% endfor %}
