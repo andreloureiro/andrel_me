@@ -5,35 +5,25 @@
 
       {% include header.html %}
 
+      {% if page.featured_image %}
+      <div class="post__featured-image" style="background-image:url({{ page.featured_image }})">
+      </div>
+      {% endif %}
+
       <div class="container">
           <article class="post">
             <h1 class="post__title" itemprop="name">{{ page.title }}</h1>
-            <p class="post__author">POR <span itemprop="author">ANDRE LOUREIRO</span></p><time class="post__time" datetime="{{ page.date }}" itemprop="dateCreated">{{ page.date | timeago }}</time>
+            <p class="post__author"><time class="post__time" datetime="{{ page.date }}" itemprop="dateCreated">{{ page.date | timeago }}</time> POR <span itemprop="author">ANDRE LOUREIRO</span></p>
             <br>
             <div class="post__content" itemprop="articleBody">
               {{ content }}
             </div>
           </article>
           {% include share.html %}
-          <div class="related">
-
-                {% if site.related_posts.size >= 1 %}
-                  
-                    <h2 class="title">Posts relacionados</h2>
-                    <ul class="list">
-
-                          {% for post in site.related_posts limit: 5 %}
-                            <li class="item"><a href="{{ post.url }}">{{ post.title }}</a></li>
-                          {% endfor %}
-
-                      </ul>
-                {% endif %}
-          </div>
+          {% include related.html %}
       </div>
 
       {% include about.html %}
-
-    {% include footer.html %}
 
     <!-- build:js({app,.tmp}) /js/scripts.js -->
     <script src="/js/app.js"></script>

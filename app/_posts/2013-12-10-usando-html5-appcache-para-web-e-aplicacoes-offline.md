@@ -2,6 +2,7 @@
 
 layout: post
 title: Usando HTML5 AppCache para Web e aplicações offline
+featured_image: '/images/posts/html5-appcache.jpg'
 date: 2013-12-12 18:12
 <!-- category: HTML5 -->
 categories:
@@ -14,8 +15,6 @@ keywords: desenvolvimento front-end client html5 css3 javascript js andre lourei
 published: true
 
 ---
-
-![HTML5 AppCache](/img/posts/html5-appcache.jpg)
 
 Uma API do HTML5 que vem recebendo bastante atenção é a [AppCache](), que permite forçar com que o browser faça o download e armazene os arquivos que quisermos no cache do navegador.
 

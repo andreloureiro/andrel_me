@@ -3,24 +3,21 @@
 @import 'typo';
 
 .button {
-  padding: rem(6) rem(10);
-  font-size: rem(12);
+  width: 30%;
+  padding: 0.8em 0.625em;
+  font-size: 0.7em;
   text-transform: uppercase;
-  background: $red;
+  background: $blue-darkest;
   color: $white;
-  border-radius: rem(2);
+  border-radius: 0.15em;
   white-space: nowrap;
   @media (max-width: rem($phone-landscape)) {
-    width: 100%;
-    display: block;
     margin: auto;
-    padding: rem(20) rem(10);
+    padding: 0.8em 0.625em;
   }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    width: 100%;
-    display: block;
-    margin: rem(10) auto;
-    padding: rem(20) rem(10);
+    margin: auto;
+    padding: 0.8em 0.625em;
   }
 }
 
@@ -37,13 +34,13 @@ h1, h2, h3, h4 {
 
 a {
   text-decoration: none;
-  color: $red;
+  color: $blue;
   font-weight: 400;
 }
 
 p {
   font-family: $text;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 img {
@@ -67,6 +64,13 @@ body {
   }
 }
 
+.line {
+  display: block;
+  width: 100%;
+  height: 0.2em;
+  background-image: linear-gradient(left, $blue, $green, $yellow, $red)
+}
+
 header {
   -webkit-transition: 0.25s all ease-out;
   position: relative;
@@ -74,20 +78,42 @@ header {
   padding: rem(20) 0;
   text-align: center;
   .header__logo {
+    img {
+      height: 3em;
+    }
+  }
+}
 
+.post__featured-image {
+  display: block;
+  width: 100%;
+  height: 20em;
+  background: center center;
+  background-size: cover;
+
+  @media (min-width: $tablet-portrait) {
+    height: 30em;
   }
 }
 
 .post {
+
+  .post__featured-image {
+    display: block;
+    width: 100%;
+    height: 20em;
+    background-size: cover;
+  }
+
   .post__title {
     display: block;
     margin: 0 auto;
     padding: 1em 4% 0.2em;
     text-decoration: none;
     text-align: center;
-    color: #BB3658;
+    color: $blue-dark;
     .title--link {
-      color: $red;
+      color: $blue;
       font-family: $title;
     }
     @media (min-width: $tablet-landscape) {
@@ -97,8 +123,7 @@ header {
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     }
   }
-  .post__time, .post__author {
-    display: block;
+  .post__author {
     padding: 0 4%;
     font-size: 0.6em;
     line-height: 1em;
@@ -117,32 +142,29 @@ header {
     margin-bottom: rem(50);
     padding: 0 4%;
     p {
-      font-weight: 100;
+      font-weight: 300;
       color: #43353D;
     }
     h1, h2, h3, h4, h5, h6 {
       margin: rem(40) 0 0;
-      color: $red;
-      font-weight: 300;
+      color: $blue-dark;
+      font-weight: 400;
     }
     a {
-      text-decoration: none;
-      color: $red;
+      color: $blue-dark;
       font-weight: 400;
       border-bottom: rem(2) solid transparent;
-      &:hover {
-        border-bottom: rem(2) solid $red;
       }
     }
     strong {
-      color: $red;
-      font-weight: 300;
+      color: $blue;
+      font-weight: 400;
     }
     ul {
       padding-left: rem(20);
       li {
         font-family: $text;
-        font-weight: 100;
+        font-weight: 300;
         color: $black;
       }
     }
@@ -151,7 +173,7 @@ header {
       font-size: rem(30);
       line-height: 130%;
       font-style: italic;
-      font-weight: 200;
+      font-weight: 300;
       color: lighten($black, 10%);
       text-align: center;
     }
@@ -160,25 +182,27 @@ header {
       border: rem(1) solid lighten($gray, 25%);
       background: lighten($gray, 30%);
       code {
-        font-family: monospace, serif;
+        font-family: 'Courier New', serif;
+        font-size: 0.8em;
         .lineno {
           color: $gray;
         }
         span {
-          font-size: rem(14);
-          font-weight: 200;
+          font-weight: 300 !important;
+          -ms-word-wrap: break-word;
+          word-break: break-word;
         }
       }
     }
     p {
       code {
-        font-family: monospace, serif;
+        font-family: 'Courier New', serif;
         padding: rem(3);
         font-size: rem(14);
         border: rem(1) solid lighten($gray, 25%);
         background: lighten($gray, 30%);
-        white-space: nowrap;
-        font-weight: 100;
+        // white-space: nowrap;
+        font-weight: 300;
       }
     }
     ul {
@@ -194,6 +218,7 @@ header {
       text-align: center;
       a {
         @extend .button;
+        padding: 0.8em 1em;
       }
     }
     p {
@@ -203,29 +228,32 @@ header {
       }
     }
   }
-}
 
 .related {
   display: block;
   width: 100%;
-  .title {
-    margin-bottom: rem(14);
-    padding: rem(6) rem(10);
-    background: $red;
-    font-size: rem(14);
-    color: $white;
-    text-transform: uppercase;
+  padding: 1em 0 3em;
+  .related__title {
+    display: block;
+    margin-left: 4%;
+    font-weight: 300;
+    text-align: left;
+    color: $gray-dark;
+
+    .fa {
+      margin-right: 0.2em;
+      font-size: 0.7em;
+      color: $gray
+    }
   }
-  .list {
-    margin-bottom: rem(40);
-    margin: 0;
-    padding-left: rem(20);
-    .item {
-      // list-style-type: none
-      line-height: rem(27);
-      .fa {
-        margin-right: rem(10);
-      }
+  .related__link {
+    display: block;
+    margin-left: 8%;
+    margin-bottom: 1em;
+    font-weight: 400;
+
+    .fa {
+      margin-left: 0.4em;
     }
   }
 }
@@ -233,26 +261,49 @@ header {
 .share {
   display: block;
   width: 100%;
-  padding: rem(40) 0;
-  text-align: center;
+  padding: 1em 0;
+  text-align: left;
+  .share__title {
+    display: inline-block;
+    margin-left: 4%;
+    vertical-align: middle;
+    font-weight: 300;
+    text-align: left;
+    color: $gray-dark;
+
+    .fa {
+      margin-right: 0.2em;
+      font-size: 0.7em;
+      color: $gray
+    }
+
+    @media (min-width: $tablet-portrait) {
+      margin-right: 1em;
+    }
+  }
   .button {
     @extend .button;
-    margin: 0;
+    width: 10%;
+    margin-left: 3%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0.8em 0.625em;
+    background: none;
     &.twitter {
-      background: $blue;
+      color: $twitter;
     }
     &.google_plus {
-      background: $red;
+      color: $plus;
     }
     &.facebook {
-      background: $blue-dark;
+      color: $facebook;
     }
-    @media (max-width: rem($tablet-portrait)) {
-      margin-bottom: rem(10);
+    @media (min-width: $tablet-portrait) {
+      width: 2.2em;
+      margin-left: 1em;
     }
     .fa {
-      margin-right: rem(6);
-      font-size: rem(14);
+      font-size: 2em;
     }
   }
 }
@@ -268,7 +319,8 @@ header {
 
     .pic__img {
       width: 6em;
-      border-radius: 50%
+      border-radius: 50%;
+      border: 0.25em solid $white;
     }
 
     @media (min-width: $tablet-portrait) {
@@ -288,7 +340,7 @@ header {
     }
 
     .about__text {
-
+      font-weight: 200;
     }
 
     @media (min-width: $tablet-portrait) {
@@ -311,9 +363,13 @@ header {
     .social__item {
       display: inline-block;
       vertical-align: top;
-      width: 32%;
+      width: 32.5%;
       margin-top: 0.25em;
       list-style-type: none;
+
+      @media (min-width: $tablet-portrait) {
+        width: 16%;
+      }
 
       .social__link {
         display: block;
@@ -322,11 +378,32 @@ header {
         font-size: 0.7em;
         text-align: center;
         background: $gray;
+
+        &.link--twitter {
+          background: $twitter;
+        }
+        &.link--facebook {
+          background: $facebook;
+        }
+        &.link--plus {
+          background: $plus;
+        }
+        &.link--github {
+          background: #EEE;
+          color: $black;
+        }
+        &.link--rss {
+          background: $rss;
+        }&.link--mail {
+          background: $green;
+        }
+
+        .fa {
+          margin-right: 0.6em;
+        }
       }
     }
   }
-
-
 }
 
 footer {
@@ -347,38 +424,3 @@ footer {
     }
   }
 }
-
-// section.projects_list
-// 	article.project
-// 		padding: rem(20) 0
-// 		border-bottom: rem(1) solid $gray
-// 		.title
-// 			display: block
-// 			margin: 0 auto
-// 			padding: rem(10) rem(10)
-// 			font-family: $title
-// 			font-size: rem(60)
-// 			font-weight: 100
-// 			text-decoration: none
-// 			font-weight: 100
-// 			text-align: center
-// 			color: $blue
-// 		.info
-// 			display: block
-// 			margin: 0 auto rem(48)
-// 			text-align: center
-// 			color: $gray
-// 		p
-// 			font-size: rem(18)
-// 			color: $black
-// 		h1, h2, h3, h4, h5, h6
-// 			margin: rem(40) 0 0
-// 			color: $blue
-// 			font-weight: 100
-// 			line-height: 150%
-// 		h1
-// 			font-size: rem(38)
-// 		h2
-// 			font-size: rem(30)
-// 		h3, h4, h5, h6
-// 			font-size: rem(20)

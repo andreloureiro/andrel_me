@@ -1,0 +1,11 @@
+<div class="related">
+
+    {% if site.related_posts.size >= 1 %}
+      
+        <h2 class="related__title"><i class="fa fa-plus"></i> Leia também</h2>
+	      {% for post in site.related_posts limit: 5 %}
+	        <a href="{{ post.url }}" class="related__link">{{ post.title }} <i class="fa fa-arrow-right"></i></a>
+	      {% endfor %}
+    {% endif %}
+
+</div>

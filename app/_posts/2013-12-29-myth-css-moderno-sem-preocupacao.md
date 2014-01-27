@@ -2,6 +2,7 @@
 
 layout: post
 title: Myth - CSS moderno sem preocupação
+featured_image: '/images/posts/myth-css-the-way-it-was-imagined.png'
 date: 2013-12-29 00:00
 <!-- category: CSS3 -->
 categories:
@@ -17,7 +18,7 @@ published: true
 
 ---
 
-Há alguns dias atrás descobri o [Myth](http://www.myth.io), que é chamado no seu site de preprocessor mas que também pode ser entendido como um postprocessor.
+Há alguns dias descobri o [Myth](http://www.myth.io), que é chamado no seu site de preprocessor mas que também pode ser entendido como um postprocessor.
 
 Hoje temos que ter muito cuidado ao escrever nosso CSS devido à inconsistência de compatibilidade de browsers. O [Can I Use](http://caniuse.com) com certeza é uma ferramenta indispensável dentro do workflow de muitos desenvolvedores front-end. O *Myth* vem para resolver dois problemas de uma vez:
 

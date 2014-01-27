@@ -9,7 +9,7 @@
 //   images: img
 //   fonts: fonts
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
   // Show elapsed time after tasks run
   require('time-grunt')(grunt);
   // Load all Grunt tasks
@@ -42,7 +42,7 @@ module.exports = function (grunt) {
         files: [
           '<%= yeoman.app %>/**/*.{html,yml,md,mkd,markdown}',
           '_config.yml',
-          '!<%= yeoman.app %>/_bower_components/**'
+          '!<%= yeoman.app %>/_components/**'
         ],
         tasks: ['jekyll:server']
       },
@@ -54,7 +54,7 @@ module.exports = function (grunt) {
           '.jekyll/**/*.html',
           '.tmp/css/**/*.css',
           '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
-          '<%= yeoman.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
+          '<%= yeoman.app %>/images/**/*.{gif,jpg,jpeg,png,svg,webp}'
         ]
       }
     },
@@ -120,23 +120,23 @@ module.exports = function (grunt) {
         bundleExec: true,
         sassDir: '<%= yeoman.app %>/_scss',
         cssDir: '.tmp/css',
-        imagesDir: '<%= yeoman.app %>/img',
+        imagesDir: '<%= yeoman.app %>/images',
         javascriptsDir: '<%= yeoman.app %>/js',
         relativeAssets: false,
-        httpImagesPath: '/img',
-        httpGeneratedImagesPath: '/img/generated',
+        httpImagesPath: '/images',
+        httpGeneratedImagesPath: '/images/generated',
         outputStyle: 'expanded',
-        raw: 'extensions_dir = "<%= yeoman.app %>/_bower_components"\n'
+        raw: 'extensions_dir = "<%= yeoman.app %>/components"\n'
       },
       dist: {
         options: {
-          generatedImagesDir: '<%= yeoman.dist %>/img/generated'
+          generatedImagesDir: '<%= yeoman.dist %>/images/generated'
         }
       },
       server: {
         options: {
           debugInfo: true,
-          generatedImagesDir: '.tmp/img/generated'
+          generatedImagesDir: '.tmp/images/generated'
         }
       }
     },
@@ -282,7 +282,7 @@ module.exports = function (grunt) {
             // Jekyll processes and moves HTML and text files
             // Usemin moves CSS and javascript inside of Usemin blocks
             // Copy moves asset files and directories
-            'img/**/*',
+            'images/**/*',
             'fonts/**/*',
             // Like Jekyll, exclude files & folders prefixed with an underscore
             '!**/_*{,/**}'
@@ -314,7 +314,7 @@ module.exports = function (grunt) {
           src: [
             '<%= yeoman.dist %>/js/**/*.js',
             '<%= yeoman.dist %>/css/**/*.css',
-            '<%= yeoman.dist %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}',
+            '<%= yeoman.dist %>/images/**/*.{gif,jpg,jpeg,png,svg,webp}',
             '<%= yeoman.dist %>/fonts/**/*.{eot*,otf,svg,ttf,woff}'
           ]
         }
@@ -343,8 +343,9 @@ module.exports = function (grunt) {
         verbose: true
       },
       check: {
-       src: ['<%= yeoman.app %>/css/**/*.css',
-             '<%= yeoman.app %>/_scss/**/*.scss']
+        src: ['<%= yeoman.app %>/css/**/*.css',
+          '<%= yeoman.app %>/_scss/**/*.scss'
+        ]
       }
     },
     csslint: {
@@ -419,13 +420,11 @@ module.exports = function (grunt) {
         //   }
         // ]
         // ,
-        upload: [
-          {
-            src: 'dist/*',
-            dest: '',
-            rel: 'dist/'
-          }
-        ]
+        upload: [{
+          src: 'dist/*',
+          dest: '',
+          rel: 'dist/'
+        }]
 
         // Files to be downloaded.
         // download: [
@@ -475,7 +474,7 @@ module.exports = function (grunt) {
   });
 
   // Define Tasks
-  grunt.registerTask('serve', function (target) {
+  grunt.registerTask('serve', function(target) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
     }
@@ -489,16 +488,16 @@ module.exports = function (grunt) {
     ]);
   });
 
-  grunt.registerTask('server', function () {
+  grunt.registerTask('server', function() {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve']);
   });
 
   // No real tests yet. Add your own.
   grunt.registerTask('test', [
-  //   'clean:server',
-  //   'concurrent:test',
-  //   'connect:test'
+    //   'clean:server',
+    //   'concurrent:test',
+    //   'connect:test'
   ]);
 
   grunt.registerTask('check', [
@@ -521,12 +520,12 @@ module.exports = function (grunt) {
     'autoprefixer:dist',
     'cssmin',
     'uglify',
-    'imagemin',
+    // 'imagemin',
     'svgmin',
-    'rev',
+    // 'rev',
     'usemin'
     // 'htmlmin'
-    ]);
+  ]);
 
   grunt.registerTask('default', [
     'check',
