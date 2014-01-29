@@ -5,12 +5,7 @@ title: Usando HTML5 AppCache para Web e aplicações offline
 featured_image: '/images/posts/html5-appcache.jpg'
 date: 2013-12-12 18:12
 <!-- category: HTML5 -->
-categories:
-- HTML5
-- offline
-- AppCache
-- mobile
-- manifest
+tags: html5 api appcache
 keywords: desenvolvimento front-end client html5 css3 javascript js andre loureiro andrel anlo anlo_ rwd design responsivo HTML5 API offline AppCache mobile cache manifest
 published: true
 
