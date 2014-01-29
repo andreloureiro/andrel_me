@@ -23,6 +23,8 @@ social:
   github_username: andreloureiro
   plus: http://plus.google.com/+andreloureiroo
 
+languages: ['pt-BR', 'en']
+
 # Exclude directories and/or files from the conversion.
 # Grunt moves image files and asset directories.
 # exclude: ['img', 'css', 'js', 'fonts',
