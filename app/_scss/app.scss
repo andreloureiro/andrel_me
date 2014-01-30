@@ -27,19 +27,13 @@
   -webkit-box-sizing: border-box;
 }
 
-h1, h2, h3, h4 {
-  font-family: $title;
-  font-weight: 400;
-}
-
 a {
   text-decoration: none;
-  color: $blue;
+  color: $black;
   font-weight: 400;
 }
 
 p {
-  font-family: $text;
   font-weight: 300;
 }
 
@@ -48,19 +42,44 @@ img {
 }
 
 hr {
+  margin: 0 4%;
   border: none;
-  border-top: rem(1) solid lighten($gray, 20%);
+  border-top: 1px solid #DDD;
+
+  @media (min-width: $tablet-portrait) {
+    margin: 0;
+  }
 }
 
 body {
   background: $white;
   width: 100%;
+  font-family: $condensed;
+
+  @media (min-width: $tablet-portrait) {
+    font-family: $sans;
+  }
+
   .container {
     width: 100%;
     @media (min-width: $tablet-portrait) {
-      width: 46em;
+      width: 40em;
       margin: auto;
+      font-family: $sans;
     }
+
+    &.sobre {
+      padding: 0 4%;
+    }
+
+    &.projetos {
+      padding: 0 4%;
+    }
+
+    &.labs {
+      padding: 0 4%;
+    }
+    
   }
 }
 
@@ -68,21 +87,45 @@ body {
   display: block;
   width: 100%;
   height: 0.2em;
-  background: $blue;
-  background-image: linear-gradient(left, $blue, $green, $yellow, $red);
-  background: -moz-linear-gradient(left, $blue, $green, $yellow, $red);
-  background-image: -ms-linear-gradient(left, $blue, $green, $yellow, $red)
+  background: $black;
 }
 
 header {
   -webkit-transition: 0.25s all ease-out;
   position: relative;
   width: 100%;
-  padding: rem(20) 0;
-  text-align: center;
+  padding: 3em 0 2em;
   .header__logo {
+    display: inline-block;
+    vertical-align: middle;
     img {
       height: 3em;
+    }
+  }
+
+  .nav {
+    display: inline-block;
+    vertical-align: middle;
+
+    .nav__list {
+      margin: 0;
+      padding: 0;
+
+      .nav__item {
+        display: inline-block;
+        margin-left: 1em;
+        vertical-align: middle;
+        list-style-type: none;
+        font-size: 0.8em;
+
+        .nav__link {
+          padding: .4em .6em;
+
+          &:hover {
+            background: #EEE;
+          }
+        }
+      }
     }
   }
 }
@@ -100,32 +143,34 @@ header {
 }
 
 .post {
-
-  .post__featured-image {
-    display: block;
-    width: 100%;
-    height: 20em;
-    background: center center;
-    background-size: cover;
-
-    @media (min-width: $tablet-portrait) {
-      height: 30em;
-    }
-  }
+  margin-bottom: 1em;
 
   .post__title {
     display: block;
     margin: 0 auto;
     padding: 1em 4% 0.2em;
+    font-family: $serif;
     text-decoration: none;
-    text-align: center;
-    color: $blue-dark;
+    color: $black;
+    font-weight: 400;
+    .fa {
+      display: inline-block;
+      width: 1.2em;
+      color: $gray;
+      font-size: 0.8em;
+      vertical-align: middle;
+    }
     .title--link {
-      color: $blue;
-      font-family: $title;
+      width: calc(100% - 1.2em);
+      display: inline-block;
+      vertical-align: middle;
+      &:hover {
+        color: $green
+      }
     }
     @media (min-width: $tablet-landscape) {
       text-align: left;
+      padding: 0;
     }
     @media (max-width: rem($phone-portrait)) {}
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -133,45 +178,61 @@ header {
   }
   .post__author {
     padding: 0 4%;
-    font-size: 0.6em;
+    font-size: 0.8em;
     line-height: 1em;
-    text-align: center;
     color: $gray;
-    text-transform: uppercase;
+    font-style: italic;
 
     @media (min-width: $tablet-landscape) {
+      padding: 0;
       font-size: 0.8em;
-      text-align: right;
     }
   }
+
+  .post__time {
+    padding-left: 4%;
+    font-style: italic;
+    font-weight: 100;
+    color: $gray
+  }
+
   .post__content {
     display: block;
     width: 100%;
-    margin-bottom: rem(50);
+    margin: 2em 0;
     padding: 0 4%;
+
+    @media (min-width: $tablet-portrait) {
+      padding: 0;
+    }
+
     p {
       font-weight: 300;
-      color: #43353D;
+      color: #555;
     }
     h1, h2, h3, h4, h5, h6 {
-      margin: rem(40) 0 0;
-      color: $blue-dark;
+      margin: 1.5em 0 0;
       font-weight: 400;
     }
     a {
-      color: $blue-dark;
+      color: $black;
       font-weight: 400;
+      text-decoration: underline;
       border-bottom: rem(2) solid transparent;
+
+      &:hover {
+        color: $green
+      }
+    
       }
     }
     strong {
-      color: $blue;
+      color: $black;
       font-weight: 400;
     }
     ul {
       padding-left: rem(20);
       li {
-        font-family: $text;
         font-weight: 300;
         color: $black;
       }
@@ -186,8 +247,7 @@ header {
       text-align: center;
     }
     pre {
-      padding: rem(5);
-      border: rem(1) solid lighten($gray, 25%);
+      padding: .2em .4em;
       background: lighten($gray, 30%);
       code {
         font-family: 'Courier New', serif;
@@ -205,9 +265,9 @@ header {
     p {
       code {
         font-family: 'Courier New', serif;
-        padding: rem(3);
+        padding: .2em .4em;
         font-size: rem(14);
-        border: rem(1) solid lighten($gray, 25%);
+        border: none;
         background: lighten($gray, 30%);
         // white-space: nowrap;
         font-weight: 300;
@@ -218,15 +278,6 @@ header {
         color: $black;
         font-weight: 300;
         font-style: rem(20);
-      }
-    }
-    p.read_more {
-      display: block;
-      margin: rem(34) 0;
-      text-align: center;
-      a {
-        @extend .button;
-        padding: 0.8em 1em;
       }
     }
     p {
@@ -252,24 +303,30 @@ header {
   display: block;
   width: 100%;
   padding: 1em 0 3em;
+
   .related__title {
-    display: block;
     margin-left: 4%;
     font-weight: 300;
     text-align: left;
-    color: $gray-dark;
+
+    @media (min-width: $tablet-portrait) {
+      margin-left: 0;
+    }
 
     .fa {
       margin-right: 0.2em;
       font-size: 0.7em;
-      color: $gray
+      color: $black
     }
   }
   .related__link {
     display: block;
-    margin-left: 8%;
+    margin-left: 4%;
     margin-bottom: 1em;
     font-weight: 400;
+    &:hover {
+      color: $green
+    }
 
     .fa {
       margin-left: 0.4em;
@@ -282,18 +339,22 @@ header {
   width: 100%;
   padding: 1em 0;
   text-align: left;
+
   .share__title {
     display: inline-block;
     margin-left: 4%;
     vertical-align: middle;
     font-weight: 300;
     text-align: left;
-    color: $gray-dark;
+
+    @media (min-width: $tablet-portrait) {
+      margin: 0;
+    }
 
     .fa {
       margin-right: 0.2em;
       font-size: 0.7em;
-      color: $gray
+      color: $black
     }
 
     @media (min-width: $tablet-portrait) {
@@ -308,13 +369,14 @@ header {
     vertical-align: middle;
     padding: 0.8em 0.625em;
     background: none;
-    &.twitter {
+    color: $black;
+    &.twitter:hover {
       color: $twitter;
     }
-    &.google_plus {
+    &.google_plus:hover {
       color: $plus;
     }
-    &.facebook {
+    &.facebook:hover {
       color: $facebook;
     }
     @media (min-width: $tablet-portrait) {

@@ -4,12 +4,8 @@ layout: post
 title: API HTML5 getUserMedia
 featured_image: '/images/posts/html5-getusermedia.png'
 date: 2013-12-14 13:17
-<!-- category: HTML5 -->
-categories:
-- HTML5 
-- getUserMedia 
-- camera 
-- audio
+category: html5
+tags: HTML5 api getUserMedia camera audio video js javascript
 keywords: desenvolvimento front-end client html5 css3 javascript js andre loureiro andrel anlo anlo_ rwd design responsivo getusermedia camera audio video
 published: true
 

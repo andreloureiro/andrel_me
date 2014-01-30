@@ -4,8 +4,8 @@ layout: post
 title: Myth - CSS moderno sem preocupação
 featured_image: '/images/posts/myth-css-the-way-it-was-imagined.png'
 date: 2013-12-29 00:00
-<!-- category: CSS3 -->
-tags: css
+category: css3
+tags: css nodejs node myth variavel variaveis calc
 keywords: desenvolvimento front-end client html5 css3 javascript js andre loureiro andrel anlo anlo_ rwd design responsivo nodejs node myth variavel variaveis calc mobile
 published: true
 

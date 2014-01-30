@@ -3,10 +3,10 @@
 layout: post
 title: Centralizar verticalmente com CSS Transform
 date: 2014-01-15 18:00
-category: CSS
+category: css
 keywords: css transform align center ie9 sass
 published: true
-tags: css
+tags: css trick alinhamento vertical align css transform
 
 ---
 

@@ -110,7 +110,8 @@ module Jekyll
       for post in posts do
         url     = post.url
         url     = '/' + url unless url =~ /^\//
-        url     = url[0..-11] if url=~/\/index.html$/
+        # url     = url[0..-11] if url=~/\/index.html$/
+        url = url + '/index.html'
         result += entry(url, post.date, get_attrs(post), site)
       end
 
@@ -138,7 +139,7 @@ module Jekyll
     #    is output for this property.
     def entry(path, date, attrs, site)
       # Remove the trailing slash from the baseurl if it is present, for consistency.
-      baseurl = site.config['baseurl']
+      baseurl = site.config['url']
       baseurl = baseurl[0..-2] if baseurl=~/\/$/
 
       "
