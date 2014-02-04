@@ -8,7 +8,7 @@ title: Andre Loureiro
 		<h1 class="post__title">
 		{% if post.category contains 'html' or post.category contains 'css' or post.category == 'javascript' or post.category == 'js' %}
 		<i class="fa fa-code"></i>
-		{% elsif post.category contains 'writing' %}
+		{% elsif post.category contains 'writing' or post.category contains 'off-topic' %}
 		<i class="fa fa-pencil"></i>
 		{% elsif post.category contains 'photo' %}
 		i.<fa class="fa-retro-camera"></fa>

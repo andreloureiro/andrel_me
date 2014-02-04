@@ -4,16 +4,16 @@
     	<a href="/" class="header__logo">
 	        <img src="/images/logo.svg" alt="Andre Loureiro logo"/>
 	    </a>
-	    <nav class="nav">
+	    <nav class="nav {% if page.class %}{{ page.class }}{% endif %}">
 	    	<ul class="nav__list">
 	    		<li class="nav__item">
-		    		<a href="/sobre" class="nav__link">SOBRE</a>
+		    		<a href="/sobre" class="nav__link link--sobre"><i class="fa fa-user"></i> SOBRE</a>
 		    	</li>
 		    	<li class="nav__item">
-		    		<a href="/projetos" class="nav__link">PROJETOS</a>	
+		    		<a href="/projetos" class="nav__link link--projetos"><i class="fa fa-rocket"></i> PROJETOS</a>	
 		    	</li>
 		    	<li class="nav__item">
-		    		<a href="/labs" class="nav__link">LABS</a>	
+		    		<a href="/labs" class="nav__link link--labs"><i class="fa fa-flask"></i> LABS</a>	
 		    	</li>
 		    	
 	    	</ul>

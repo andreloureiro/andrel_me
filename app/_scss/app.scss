@@ -31,6 +31,9 @@ a {
   text-decoration: none;
   color: $black;
   font-weight: 400;
+  &:hover {
+    color: $green;
+  }
 }
 
 p {
@@ -48,6 +51,12 @@ hr {
 
   @media (min-width: $tablet-portrait) {
     margin: 0;
+  }
+}
+ul {
+  padding-left: 1em;
+  li {
+    font-weight: 300;
   }
 }
 
@@ -87,7 +96,7 @@ body {
   display: block;
   width: 100%;
   height: 0.2em;
-  background: $black;
+  background: $green;
 }
 
 header {
@@ -127,6 +136,25 @@ header {
         }
       }
     }
+
+    &.sobre {
+      .link--sobre {
+        background:#EEE;
+        color:$green;
+      }
+    }
+    &.projetos {
+      .link--projetos {
+        background:#EEE;
+        color:$green;
+      }
+    }
+    &.labs {
+      .link--labs {
+        background:#EEE;
+        color:$green;
+      }
+    }
   }
 }
 
@@ -147,8 +175,10 @@ header {
 
   .post__title {
     display: block;
-    margin: 0 auto;
-    padding: 1em 4% 0.2em;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 4%;
+    padding-right: 4%;
     font-family: $serif;
     text-decoration: none;
     color: $black;
@@ -190,10 +220,22 @@ header {
   }
 
   .post__time {
-    padding-left: 4%;
+    padding-left: 12%;
     font-style: italic;
     font-weight: 100;
-    color: $gray
+    color: $gray;
+
+    @media (min-width: $phone-landscape) {
+      padding-left: 11%;  
+    }
+
+    @media (min-width: $tablet-portrait) {
+      padding-left: 9%;
+    }
+
+    @media (min-width: $tablet-landscape) {
+      padding-left: 5%;
+    }
   }
 
   .post__content {
@@ -209,10 +251,6 @@ header {
     p {
       font-weight: 300;
       color: #555;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin: 1.5em 0 0;
-      font-weight: 400;
     }
     a {
       color: $black;
@@ -441,51 +479,58 @@ header {
       }
     }
   }
+}
 
-  .about__social {
-    display: block;
-    margin: 0;
-    padding: 0;
+.about__social {
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1em;
 
-    .social__item {
-      display: inline-block;
-      vertical-align: top;
-      width: 24.3%;
-      margin-top: 0.25em;
-      list-style-type: none;
+  .social__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 24%;
+    margin-top: 0.25em;
+    list-style-type: none;
 
-      .social__link {
-        display: block;
-        padding: 1em 0;
-        color: $white;
-        font-size: 0.7em;
-        text-align: center;
-        background: $gray;
+    .social__link {
+      display: block;
+      padding: 1em 0;
+      color: $white;
+      font-size: 1em;
+      text-align: center;
+      background: $gray;
 
-        &.link--twitter {
-          background: $twitter;
-        }
-        &.link--facebook {
-          background: $facebook;
-        }
-        &.link--plus {
-          background: $plus;
-        }
-        &.link--github {
-          background: #EEE;
-          color: $black;
-        }
-        &.link--rss {
-          background: $rss;
-        }&.link--mail {
-          background: $green;
-        }
+      &.link--twitter {
+        background: $twitter;
+      }
+      &.link--facebook {
+        background: $facebook;
+      }
+      &.link--plus {
+        background: $plus;
+      }
+      &.link--github {
+        background: #EEE;
+        color: $black;
+      }
+      &.link--rss {
+        background: $rss;
+      }&.link--mail {
+        background: $green;
+      }
 
-        .fa {
-          margin-right: 0.6em;
-        }
+      .fa {
+        margin-right: 0.6em;
       }
     }
+  }
+}
+
+.labs {
+  h2 {
+    margin: 1.6em 0 0
   }
 }
 
