@@ -256,7 +256,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= yeoman.dist %>',
+          cwd: '<%= yeoman.app %>',
           src: '**/*.{jpg,jpeg,png}',
           dest: '<%= yeoman.dist %>'
         }]
@@ -374,6 +374,17 @@ module.exports = function(grunt) {
       ]
     },
     // aws: grunt.file.readJSON('~/grunt-aws.json'),
+    exec: {
+      git_add: {
+        cmd: 'git add -A'
+      },
+      git_commit: {
+        cmd: function() {
+          var date = new Date();
+          return "git commit -m 'Build " + date.toLocaleDateString + "'";
+        }
+      }
+    },
     s3: {
       options: {
         key: 'AKIAIDSOBKSATGRVSUHA',
@@ -520,8 +531,8 @@ module.exports = function(grunt) {
     'autoprefixer:dist',
     'cssmin',
     'uglify',
-    // 'imagemin',
-  // 'svgmin',
+    'imagemin',
+    // 'svgmin',
     // 'rev',
     'usemin'
     // 'htmlmin'
@@ -532,4 +543,6 @@ module.exports = function(grunt) {
     'test',
     'build'
   ]);
+
+  grunt.registerTask('git', 'exec')
 };
