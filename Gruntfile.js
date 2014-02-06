@@ -256,7 +256,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= yeoman.app %>',
+          cwd: '<%= yeoman.dist %>',
           src: '**/*.{jpg,jpeg,png}',
           dest: '<%= yeoman.dist %>'
         }]
@@ -383,6 +383,12 @@ module.exports = function(grunt) {
           var date = new Date();
           return "git commit -m 'Build " + date.toLocaleDateString + "'";
         }
+      },
+      git_push: {
+        cmd: 'git push'
+      },
+      s3_push: {
+        cmd: 's3_website push --site dist'
       }
     },
     s3: {
@@ -531,11 +537,12 @@ module.exports = function(grunt) {
     'autoprefixer:dist',
     'cssmin',
     'uglify',
-    'imagemin',
+    // 'imagemin',
     // 'svgmin',
     // 'rev',
-    'usemin'
+    'usemin',
     // 'htmlmin'
+    'exec'
   ]);
 
   grunt.registerTask('default', [
