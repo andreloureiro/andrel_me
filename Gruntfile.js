@@ -541,9 +541,9 @@ module.exports = function(grunt) {
     'imagemin',
     // 'svgmin',
     // 'rev',
-    'usemin',
+    'usemin'
     // 'htmlmin'
-    'exec'
+
   ]);
 
   grunt.registerTask('default', [
@@ -552,5 +552,5 @@ module.exports = function(grunt) {
     'build'
   ]);
 
-  grunt.registerTask('git', 'exec')
+  grunt.registerTask('up', 'exec')
 };
