@@ -381,7 +381,8 @@ module.exports = function(grunt) {
       git_commit: {
         cmd: function() {
           var date = new Date();
-          return "git commit -m 'Build " + date.toLocaleDateString + "'";
+          var command = "git commit -m 'Build " + date.toLocaleDateString() + "'";
+          return command;
         }
       },
       git_push: {
