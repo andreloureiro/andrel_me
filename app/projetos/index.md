@@ -11,6 +11,7 @@ Portal da montadora no Brasil. Participei da equipe front-end das versões deskt
 
 [<i class="fa fa-link"></i> http://fiat.com.br](http://fiat.com.br)
 
+---
 
 ## [NubeXpress](http://www.nubexpress.com.br)
 
@@ -21,6 +22,7 @@ Calculadora simplificada para cálculo de gastos do serviço EC2 da [AWS](http:/
 
 [<i class="fa fa-link"></i> http://www.nubexpress.com.br](http://www.nubexpress.com.br)
 
+---
 
 ## [Nova Weather](http://novaweather.herokuapp.com)
 Aplicação simples de previsão do tempo feito em [Ruby on Rails](http://rubyonrails.org). Desenvolvi a aplicação completa.

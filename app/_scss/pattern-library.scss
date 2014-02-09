@@ -103,6 +103,7 @@ code {
 	padding: 0.2em 0.4em;
 	font-family: monospace;
 	font-weight: 200;
+	font-weight: 300 !important;
 	background: $color-gray-light;
 }
 
@@ -128,7 +129,31 @@ ul, ol {
 	}
 }
 
+hr {
+	border: none;
+	border-top: 2px solid $color-gray-light;
+}
 
+.container {
+	width: 100%;
+	padding: 1em;
+	margin: auto;
+
+	@media (min-width: $media-query-small) {
+		width: 37.5em;
+		padding: 0;
+	}
+
+	@media (min-width: $media-query-medium) {
+		width: 50em;
+		padding: 0;
+	}
+}
+
+.header__logo {
+	display: inline-block;
+	vertical-align: middle;
+}
 
 // Menu
 
@@ -168,6 +193,8 @@ ul, ol {
 
 	@media (min-width: $media-query-small) {
 		display: inline-block;
+		vertical-align: middle;
+		width: auto;
 
 		.menu__list {
 			border-bottom: none;
@@ -213,14 +240,17 @@ ul, ol {
 	}
 	.item__category {
 		display: inline-block;
+		vertical-align: middle;
 		padding: 0.2em 0.4em;
 		margin: 0;
 		font-size: 0.8em;
 		color: $color-white;
 		background: $color-green;
+		text-transform: uppercase;
 	}
 	.item__date {
 		display: inline-block;
+		vertical-align: middle;
 		margin: 0 0 0 0.4em;
 		font-family: $font-condensed;
 		font-size: 0.8em;
@@ -261,6 +291,7 @@ ul, ol {
 			font-size: 0.8em;
 			color: $color-white;
 			background: $color-green;
+			text-transform: uppercase;
 		}
 
 		.post__date {

@@ -1,9 +1,14 @@
 <div class="related">
 	{% if site.related_posts.size != 0 %}
-    <h4 class="related__title"><i class="fa fa-plus"></i> Leia também</h4>
-      {% for post in site.related_posts limit: 3 %}
-        <a href="{{ post.url }}" class="related__link">{{ post.title }} <i class="fa fa-long-arrow-right"></i></a>
-      {% endfor %}
 	{% endif %}
-
+    <p class="related__title">Artigos relacionados</p>
+    <ul class="related__list">
+    	{% for post in site.related_posts limit: 3 %}
+	    	<li class="related__item">
+	          <a href="{{ post.url }}" class="item__link">
+	              <i class="fa fa-code"> {{ post.title }}</i>
+	          </a>
+	      </li>
+    	{% endfor %}
+    </ul>
 </div>

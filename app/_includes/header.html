@@ -2,21 +2,26 @@
 <header>
     <div class="container">
     	<a href="/" class="header__logo">
-	        <img src="/images/logo.svg" alt="Andre Loureiro logo"/>
+	        <img src="/images/logo.svg" alt="Andre Loureiro logo" width="50"/>
 	    </a>
-	    <nav class="nav {% if page.class %}{{ page.class }}{% endif %}">
-	    	<ul class="nav__list">
-	    		<li class="nav__item">
-		    		<a href="/sobre" class="nav__link link--sobre"><i class="fa fa-user"></i> SOBRE</a>
-		    	</li>
-		    	<li class="nav__item">
-		    		<a href="/projetos" class="nav__link link--projetos"><i class="fa fa-rocket"></i> PROJETOS</a>	
-		    	</li>
-		    	<li class="nav__item">
-		    		<a href="/labs" class="nav__link link--labs"><i class="fa fa-flask"></i> LABS</a>	
-		    	</li>
-		    	
-	    	</ul>
-	    </nav>
+	    <nav class="menu">
+		    <ul class="menu__list">
+		        <li class="menu__list-item">
+		            <a href="/sobre" class="list-item__link {% if page.class == 'sobre' %}{{list-item__link--ACTIVE}}{% endif %}">
+		                SOBRE
+		            </a>
+		        </li>
+		        <li class="menu__list-item">
+		            <a href="/projetos" class="list-item__link {% if page.class == 'projetos' %}{{ list-item__link--ACTIVE }}{% endif %}">
+		                PROJETOS
+		            </a>
+		        </li>
+		        <li class="menu__list-item">
+		            <a href="/labs" class="list-item__link {% if page.class == 'labs' %}{{ list-item__link--ACTIVE }}{% endif %}">
+		                LABS
+		            </a>
+		        </li>
+		    </ul>
+		</nav>
     </div>
 </header>

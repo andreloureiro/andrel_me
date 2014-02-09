@@ -34,25 +34,9 @@ Neste blog (sempre que tenho tempo), posto/espero postar material em português 
 
 Você pode me mandar um email no [andreloureiroo@gmail.com](mailto:andreloureiroo@gmail.com) ou _get in touch_ nas redes sociais:
 
-<ul class="about__social">
-    <li class="social__item">
-        <a href="http://twitter.com/anlo_" class="social__link link--twitter">
-            <i class="fa fa-twitter"></i>
-        </a>
-    </li>
-    <li class="social__item">
-        <a href="http://plus.google.com/+andreloureiroo" class="social__link link--plus">
-            <i class="fa fa-google-plus"></i>
-        </a>
-    </li>
-    <li class="social__item">
-        <a href="http://facebook.com/andreloureiroo" class="social__link link--facebook">
-            <i class="fa fa-facebook"></i>
-        </a>
-    </li>
-    <li class="social__item">
-        <a href="http://github.com/andreloureiro" class="social__link link--github">
-            <i class="fa fa-github"></i>
-        </a>
-    </li>
-</ul>
+- [Twitter](http://twitter.com/anlo_)
+- [Facebook](http://facebook.com/andreloureiroo)
+- [Plus](http://plus.google.com/+andreloureiroo)
+- [Github](http://github.com/andreloureiro)
+
+<br>

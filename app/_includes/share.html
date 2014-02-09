@@ -1,8 +1,15 @@
 <div class="share">
-	<h4 class="share__title">
-		<i class="fa fa-share"></i> Compartilhe
-	</h4>
-	<a href="http://twitter.com/intent/tweet?text={{ page.title | stringtourl }}&url={{site.url}}{{page.url}}&via=anlo_" class="twitter button"><i class="fa fa-twitter"></i></a>
-	<a href="https://plus.google.com/share?url=http://andrel.me{{ page.url }}" class="google_plus button"><i class="fa fa-google-plus"></i></a>
-	<a href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" class="facebook button"><i class="fa fa-facebook"></i></a>
+    <p class="share__title">Compartilhe</p>
+    <ul class="share__list">
+        <li class="share__item">
+            <a href="http://twitter.com/intent/tweet?text={{ page.title | stringtourl }}&url={{site.url}}{{page.url}}&via=anlo_" class="share__link">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        <li class="share__item">
+            <a href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" class="share__link">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </li>
+    </ul>
 </div>
