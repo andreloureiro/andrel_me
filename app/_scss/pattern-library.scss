@@ -1,0 +1,382 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700|Roboto:400,300,300italic,400italic,700,700italic|Roboto+Condensed:300italic,400italic,700italic,400,300,700);
+
+$font-sans: 'Roboto', Helvetica, Arial, sans-serif;
+$font-condensed: 'Roboto Condensed', Helvetica, Arial, sans-serif;
+$font-serif: 'Roboto Slab', Times New Roman, serif;
+
+$color-white: rgba(252, 252, 252, 1);
+$color-black: rgba(85, 85, 85, 1);
+$color-gray: rgba(149, 165, 166, 1);
+$color-gray-light: rgba(240, 240, 240, 1);
+$color-green: rgba(30, 202, 107, 1);
+
+$media-query-small: 40.625em; // 650px
+$media-query-medium: 78.125em; // 1200px
+$media-query-high: 100em; //1600
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: serif;
+	font-weight: 400;
+	color: $color-black;
+}
+
+h3, h4, h5, h6 {
+	font-family: sans-serif;
+	font-size: 1.375em;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	line-height: 1.13636364em;
+	color: $color-black;
+
+	@media (min-width: $media-query-small) {
+		font-size: 1.5em;
+		line-height: 1.25em;
+	}
+}
+
+h1 > a, h2 > a {
+	text-decoration: none;
+}
+
+h1, h2 {
+	font-family: $font-serif;
+}
+h3, h4, h5, h6 {
+	font-family: $font-sans;
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 1.25em;
+
+	@media (min-width: $media-query-small) {
+		font-size: 2.5em;
+		line-height: 1.125em;
+	}
+}
+
+h2 {
+	font-size: 1.625em;
+	line-height: 1.15em;
+
+	@media (min-width: $media-query-small) {
+		font-size: 2em;
+		line-height: 1.25em;
+	}
+}
+
+p {
+	margin-bottom: 1em;
+	font-family: $font-condensed;
+	font-size: 1em;
+	font-weight: 200;
+	line-height: 1.25em;
+	color: $color-black;
+
+	@media (min-width: $media-query-small) {
+		font-family: $font-sans;
+		line-height: 1.375em;
+	}
+}
+
+a {
+	font-weight: 400;
+	color: $color-black;
+	&:hover {
+		color: $color-green
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+pre {
+	display: block;
+	width: 100%;
+	padding: 0.4em 0.4em;
+	background: $color-gray-light;
+	box-sizing: border-box;
+}
+
+code {
+	padding: 0.2em 0.4em;
+	font-family: monospace;
+	font-weight: 200;
+	background: $color-gray-light;
+}
+
+blockquote {
+	margin-left: 0;
+	padding-left: 2em;
+	margin-right: 0;
+	border-left: 0.4em solid $color-gray-light;
+}
+
+ul, ol {
+	margin: 0;
+	padding-left: 2em;
+
+	li {
+		font-family: $font-condensed;
+		line-height: 1.5;
+		font-weight: 200;
+
+		@media (min-width: $media-query-small) {
+			font-family: $font-sans;
+		}
+	}
+}
+
+
+
+// Menu
+
+.menu {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+
+	.menu__list {
+		display: block;
+		width: 100%;
+		padding: 0;
+		box-sizing: border-box;
+		border-bottom: 1px solid $color-gray-light;
+
+		.menu__list-item {
+			font-family: $font-sans;
+			display: block;
+			width: 100%;
+
+			.list-item__link {
+				display: block;
+				width: 100%;
+				padding: 1em;
+				box-sizing: border-box;
+				font-size: 1em;
+				text-decoration: none;
+				border-top: 1px solid $color-gray-light;
+
+				&.list-item__link--ACTIVE {
+					color: $color-green;
+					background: $color-gray-light;
+				}
+			}
+		}
+	}
+
+	@media (min-width: $media-query-small) {
+		display: inline-block;
+
+		.menu__list {
+			border-bottom: none;
+
+			.menu__list-item {
+				display: inline-block;
+				vertical-align: middle;
+				width: auto;
+
+				.list-item__link {
+					padding: 0.6em 0.8em;
+					border-top: none;
+					font-size: 0.8em;
+				}
+			}
+		}
+	}
+
+	@media (min-width: $media-query-high) {
+
+		.menu__list {
+
+			.menu__list-item {
+
+				.list-item__link {
+					font-size: 1.2em;
+					padding: 1em;
+				}
+			}
+		}
+	}
+}
+
+// Article list item
+
+.post-list__item {
+	display: block;
+	width: 100%;
+	margin-bottom: 2em;
+
+	.item__title {
+		margin: 0.4em auto 0.4em;
+	}
+	.item__category {
+		display: inline-block;
+		padding: 0.2em 0.4em;
+		margin: 0;
+		font-size: 0.8em;
+		color: $color-white;
+		background: $color-green;
+	}
+	.item__date {
+		display: inline-block;
+		margin: 0 0 0 0.4em;
+		font-family: $font-condensed;
+		font-size: 0.8em;
+		font-style: italic;
+		font-weight: 300;
+		color: $color-gray;
+	}
+
+	@media (min-width: $media-query-small) {
+		
+		.item__category {
+			font-size: 0.6em;
+		}
+	}
+}
+
+// Article title
+
+.post__title {
+	display: block;
+	width: 100%;
+	margin-bottom: 3em;
+
+	.post__name {
+		margin: 0.4em auto 0.4em;
+	}
+
+	.post__meta {
+		display: inline-block;
+		vertical-align: middle;
+		width: 40%;
+
+		.post__category {
+			display: inline-block;
+			vertical-align: middle;
+			padding: 0.2em 0.4em;
+			margin: 0;
+			font-size: 0.8em;
+			color: $color-white;
+			background: $color-green;
+		}
+
+		.post__date {
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 0 0 0.4em;
+			font-family: $font-condensed;
+			font-size: 0.8em;
+			font-style: italic;
+			font-weight: 300;
+			color: $color-gray;
+		}
+	}
+
+	.post__share {
+		display: inline-block;
+		vertical-align: middle;
+		width: 56%;
+		text-align: right;
+
+		.share__list {
+			margin: 0;
+			padding: 0;
+
+			.share__item {
+				display: inline-block;
+				vertical-align: middle;
+				margin-left: 2%;
+
+				.share__link {
+					padding: 0.4em;
+				}
+			} 
+		}
+	}
+
+	@media (min-width: $media-query-small) {
+		
+	}
+}
+
+
+// Article info
+
+.post__info {
+	display: block;
+	width: 100%;
+	margin-top: 2em;
+	border-top: 1px solid $color-gray-light;
+
+	.info__by {
+		font-size: 0.8em;
+		font-style: italic;
+		color: $color-gray;
+	}
+}
+
+// Article share
+
+.share {
+	display: block;
+	width: 100%;
+
+	.share__title {
+		display: inline-block;
+		vertical-align: middle;
+		width: 5.4em;
+	}
+
+	.share__list {
+		display: inline-block;
+		vertical-align: middle;
+		width: 60%;
+		padding: 0;
+
+		.share__item {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 1em;
+			text-decoration: none;
+		}
+	}
+
+	@media (min-width: $media-query-small) {
+		
+		.share__title {
+			width: 7em;
+		}
+
+		.share__list {
+
+			.share__item {
+				margin-right: 1.2em;
+			}
+		}
+	}
+}
+
+// Related articles
+
+.related {
+
+	.related__title {
+
+	}
+
+	.related__list {
+		padding: 0;
+
+		.related__item {
+			text-decoration: none;
+
+			.item__link {
+				display: block;
+				padding: 0.4em 0.4em;
+			}
+		}
+	}
+}
