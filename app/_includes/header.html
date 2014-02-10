@@ -5,23 +5,29 @@
 	        <img src="/images/logo.svg" alt="Andre Loureiro logo" width="50"/>
 	    </a>
 	    <nav class="menu">
-		    <ul class="menu__list">
+		    <ul class="menu__list {% if page.class %}{{ page.class }}{% endif %}">
+		    		<li class="menu__list-item list-item__mobile-close">
+		    			<p class="mobile-menu-close">x</p>
+		    		</li>
 		        <li class="menu__list-item">
-		            <a href="/sobre" class="list-item__link {% if page.class == 'sobre' %}{{list-item__link--ACTIVE}}{% endif %}">
+		            <a href="/sobre" class="list-item__link sobre">
 		                SOBRE
 		            </a>
 		        </li>
 		        <li class="menu__list-item">
-		            <a href="/projetos" class="list-item__link {% if page.class == 'projetos' %}{{ list-item__link--ACTIVE }}{% endif %}">
+		            <a href="/projetos" class="list-item__link projetos">
 		                PROJETOS
 		            </a>
 		        </li>
 		        <li class="menu__list-item">
-		            <a href="/labs" class="list-item__link {% if page.class == 'labs' %}{{ list-item__link--ACTIVE }}{% endif %}">
+		            <a href="/labs" class="list-item__link labs">
 		                LABS
 		            </a>
 		        </li>
 		    </ul>
 		</nav>
+		<div class="mobile-launcher">
+			<img src="/images/launcher.svg" alt="Launcher para mobile">
+		</div>
     </div>
 </header>
