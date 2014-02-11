@@ -6,7 +6,7 @@
     	{% for post in site.related_posts limit: 3 %}
 	    	<li class="related__item">
 	          <a href="{{ post.url }}" class="item__link">
-	              <i class="fa fa-code"> {{ post.title }}</i>
+	              {{ post.title }} <i class="fa fa-long-arrow-right"></i>
 	          </a>
 	      </li>
     	{% endfor %}

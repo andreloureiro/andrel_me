@@ -6,19 +6,20 @@ var App = (function() {
 
   var mobileMenu = function() {
     var launcher = document.querySelector('.mobile-launcher'),
-      mobMenu = document.querySelector('.menu'),
-      mobMenuClose = document.querySelector('.mobile-menu-close');
+      close = document.querySelector('.menu .close'),
+      menu = document.querySelector('.menu'),
+      logo = document.querySelector('.header__logo'),
+      content = document.querySelector('.content');
     launcher.addEventListener('click', function() {
-      // mobMenu.classList.add('menu--ACTIVE');
-      document.body.classList.add('mobile-menu--ACTIVE');
+      menu.classList.add('menu--ACTIVE');
     });
-    mobMenuClose.addEventListener('click', function() {
-      // mobMenu.classList.remove('menu--ACTIVE');
-      document.body.classList.remove('mobile-menu--ACTIVE');
-    })
+    close.addEventListener('click', function() {
+      menu.classList.remove('menu--ACTIVE');
+    });
   };
 
   return {
-    init: init
+    init: init,
+    mobileMenu: mobileMenu
   }
 }())

@@ -32,7 +32,7 @@ Neste blog (sempre que tenho tempo), posto/espero postar material em português 
 
 ## Social
 
-Você pode me mandar um email no [andreloureiroo@gmail.com](mailto:andreloureiroo@gmail.com) ou _get in touch_ nas redes sociais:
+Você pode me mandar um email no [hi@andrel.me](mailto:hi@andrel.me) ou _get in touch_ nas redes sociais:
 
 - [Twitter](http://twitter.com/anlo_)
 - [Facebook](http://facebook.com/andreloureiroo)

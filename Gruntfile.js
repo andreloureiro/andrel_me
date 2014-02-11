@@ -53,8 +53,9 @@ module.exports = function(grunt) {
         files: [
           '.jekyll/**/*.html',
           '.tmp/css/**/*.css',
-          '{.tmp,<%= yeoman.app %>}/<%= js %>/**/*.js',
-          '<%= yeoman.app %>/images/**/*.{gif,jpg,jpeg,png,svg,webp}'
+          '{.tmp,<%= yeoman.app %>}/**/*.js',
+          '<%= yeoman.app %>/images/**/*.{gif,jpg,jpeg,png,svg,webp}',
+          '<%= yeoman.app %>/**/*.js'
         ]
       }
     },
@@ -115,8 +116,6 @@ module.exports = function(grunt) {
     },
     compass: {
       options: {
-        // If you're using global Sass gems, require them here.
-        // require: ['singularity', 'jacket'],
         bundleExec: true,
         sassDir: '<%= yeoman.app %>/_scss',
         cssDir: '.tmp/css',
@@ -532,7 +531,7 @@ module.exports = function(grunt) {
     'clean:dist',
     // Jekyll cleans files from the target directory, so must run first
     'jekyll:dist',
-    'concurrent:dist',
+    'concurrent:dist', // ['compass:dist', 'coffee:dist', 'copy:dist']
     'useminPrepare',
     'concat',
     'autoprefixer:dist',

@@ -8,8 +8,11 @@ category: css3
 tags: css nodejs node myth variavel variaveis calc
 keywords: desenvolvimento front-end client html5 css3 javascript js andre loureiro andrel anlo anlo_ rwd design responsivo nodejs node myth variavel variaveis calc mobile
 published: true
+class: blog
 
 ---
+
+![Myth CSS moderno](/images/posts/myth-css-the-way-it-was-imagined.png)
 
 Há alguns dias descobri o [Myth](http://www.myth.io), que é chamado no seu site de preprocessor mas que também pode ser entendido como um postprocessor.
 

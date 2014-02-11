@@ -7,7 +7,7 @@
 
       {% include header.html %}
 
-      <div class="container {% if page.class %}{{ page.class }}{% endif %}">
+      <div class="content container {% if page.class %}{{ page.class }}{% endif %}">
         {{ content }}
       </div>
 
@@ -15,7 +15,7 @@
     <script src="/_src/app.js"></script>
     <!-- endbuild -->
     <script>
-        App.init();
+        App.mobileMenu();
     </script>
     </body>
 </html>

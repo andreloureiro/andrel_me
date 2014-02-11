@@ -7,6 +7,7 @@ category: css
 keywords: css transform align center ie9 sass
 published: true
 tags: css trick alinhamento vertical align css transform
+class: blog
 
 ---
 

@@ -7,8 +7,11 @@ date: 2013-12-12 18:12
 category: html
 tags: html5 api appcache offline mobile cache manifest
 keywords: desenvolvimento front-end client html5 css3 javascript js andre loureiro andrel anlo anlo_ rwd design responsivo HTML5 API offline AppCache mobile cache manifest
+class: blog
 
 ---
+
+![Offline](/images/posts/html5-appcache.jpg)
 
 Uma API do HTML5 que vem recebendo bastante atenção é a [AppCache](), que permite forçar com que o browser faça o download e armazene os arquivos que quisermos no cache do navegador.
 
