@@ -85,7 +85,7 @@ img {
 
 .content {
   word-break: break-word;
-  
+
   img {
     display: block;
     margin: auto;
@@ -323,10 +323,10 @@ header {
     -moz-transition: all cubic-bezier(.05,.7,.21,.98) 200ms;
     -ms-transition: all cubic-bezier(.05,.7,.21,.98) 200ms;
     transition: all cubic-bezier(.05,.7,.21,.98) 200ms;
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    transform: translateX(100%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
   }
 }
 
