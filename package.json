@@ -2,7 +2,9 @@
   "name": "andrel-me",
   "version": "1.0.0",
   "description": "Yeoman / Grunt workflow for andrel_me",
-  "dependencies": {},
+  "dependencies": {
+    "pageres": "~0.1.4"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~0.2.0",

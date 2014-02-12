@@ -5,6 +5,10 @@
 body {
   height: 100%;
   position: relative;
+
+  @media (min-width: $media-query-high) {
+    font-size: 22px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -153,7 +157,6 @@ hr {
 
 header {
   margin-bottom: 3.1em;
-  background: $color-white;
 
   .container {
 
