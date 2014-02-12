@@ -3,13 +3,8 @@
 @import 'typo';
 
 body {
-  -webkit-transition: all cubic-bezier(.05,.7,.21,.98) 200ms;
   height: 100%;
   position: relative;
-
-  &.mobile-menu--ACTIVE {
-    -webkit-transform: translateX(-86%);
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -192,7 +187,13 @@ header {
   top: 0;
   right: 0;
   -webkit-transition: all cubic-bezier(.05,.7,.21,.98) 200ms;
+  -moz-transition: all cubic-bezier(.05,.7,.21,.98) 200ms;
+  -ms-transition: all cubic-bezier(.05,.7,.21,.98) 200ms;
+  transition: all cubic-bezier(.05,.7,.21,.98) 200ms;
   -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
   background: $color-black;
   box-sizing: border-box;
   // box-shadow: inset 0.4em 0 1em black;
@@ -268,10 +269,6 @@ header {
         background: $color-gray-light;
       }
     }
-
-    &.menu__list--ACTIVE {
-      display: block;
-    }
   }
 
   @media (min-width: $media-query-small) {
@@ -321,7 +318,13 @@ header {
 
   &.menu--ACTIVE {
     -webkit-transition: all cubic-bezier(.05,.7,.21,.98) 200ms;
-    -webkit-transform: translateX(0);
+    -moz-transition: all cubic-bezier(.05,.7,.21,.98) 200ms;
+    -ms-transition: all cubic-bezier(.05,.7,.21,.98) 200ms;
+    transition: all cubic-bezier(.05,.7,.21,.98) 200ms;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
   }
 }
 
