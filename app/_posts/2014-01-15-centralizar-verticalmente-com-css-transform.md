@@ -27,13 +27,13 @@ Li comentários de um pessoal dizendo que não gosta desta técnica porque "pare
 
 <!--readmore-->
 
-##The SASS way
+##The Sass way
 
-E se você usa [SASS](http://sass-lang.com/), pode otimizar seu processo de desenvolvimento do CSS criando uma classe para extender no elemento que quiser centralizar.
+E se você usa [Sass](http://sass-lang.com/), pode otimizar seu processo de desenvolvimento do CSS criando uma classe para extender no elemento que quiser centralizar.
 
-No SASS, podemos [extender classe(s) dentro de classe(s)](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#extend). Mas se criarmos uma classe `.vertical-center` só para essa finalidade, ela será inútil se compilada para nosso arquivo CSS final pois não será usada em nenhum elemento.
+No Sass, podemos [extender classe(s) dentro de classe(s)](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#extend). Mas se criarmos uma classe `.vertical-center` só para essa finalidade, ela será inútil se compilada para nosso arquivo CSS final pois não será usada em nenhum elemento.
 
-Então, iremos usar o sinal `%` no lugar do `.` e assim diremos ao SASS que, na hora que ele compilar para CSS, não precisa manter esse código porque sozinho ele só irá aumentar o tamanho final do nosso arquivo. 
+Então, iremos usar o sinal `%` no lugar do `.` e assim diremos ao Sass que, na hora que ele compilar para CSS, não precisa manter esse código porque sozinho ele só irá aumentar o tamanho final do nosso arquivo. 
 
 ```scss
 %vertical-center {
