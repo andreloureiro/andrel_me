@@ -17,8 +17,6 @@ Uma API do HTML5 que vem recebendo bastante atenção é a [AppCache](), que per
 
 O resultado é a otimização na economia de requests na próxima vez que o usuário precisar desse arquivo. Mas isso não quer dizer que você deve colocar o site inteiro no cache do browser, e sim o que for apenas necessário.
 
-<!--readmore-->
-
 ## Use com parcimônia
 
 Você deve conhecer bem o projeto que está trabalhando e saber do que o site ou aplicação precisa para definir os arquivos que irá precisar incluir no AppCache.
