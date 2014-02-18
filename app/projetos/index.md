@@ -13,14 +13,14 @@ Portal da montadora no Brasil. Participei da equipe front-end das versões deskt
 
 ---
 
-## [NubeXpress](http://www.nubexpress.com.br)
+<h2><a href="http://www.nubexpress.com.br" class="go-nubexpress">Nubexpress</a></h2>
 
 Calculadora simplificada para cálculo de gastos do serviço EC2 da [AWS](http://aws.amazon.com). Trabalhei no front-end do projeto.
 
 - Responsivo
 - Desenvolvido em [AngularJS](http://angularjs.org) e [SASS](http://sass-lang.com)
 
-[<i class="fa fa-link"></i> http://www.nubexpress.com.br](http://www.nubexpress.com.br)
+<a href="http://www.nubexpress.com.br" class="go-nubexpress"><i class="fa fa-link"></i> http://www.nubexpress.com.br</a>
 
 ---
 

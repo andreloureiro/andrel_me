@@ -22,12 +22,12 @@
                           <p>Compartilhe</p>
                       </li>
                       <li class="share__item">
-                          <a href="http://twitter.com/intent/tweet?text={{ page.title | stringtourl }}&url={{site.url}}{{page.url}}&via=anlo_" class="share__link">
+                          <a href="http://twitter.com/intent/tweet?text={{ page.title | stringtourl }}&url={{site.url}}{{page.url}}&via=anlo_" class="share__link twitter">
                               <i class="fa fa-twitter"></i>
                           </a>
                       </li>
                       <li class="share__item">
-                          <a href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" class="share__link">
+                          <a href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" class="share__link facebook">
                               <i class="fa fa-facebook"></i>
                           </a>
                       </li>
@@ -39,7 +39,7 @@
           </div>
           <div class="post__info">
               <p class="info__by">
-                  Por <span itemprop="author">André Loureiro</span> em <time class="info__date" itemprop="datePublished">{{ page.date | date_to_string }}</time>.
+                  Por <span itemprop="author">André Loureiro</span> em <time class="info__date" itemprop="datePublished">{{ page.date | date_to_string }}</time>.<a href="https://twitter.com/anlo_" class="twitter-follow-button" data-show-count="true" data-lang="pt-BR"></a>
               </p>
           </div>
           </article>
@@ -51,7 +51,8 @@
     <script src="/_src/app.js"></script>
     <!-- endbuild -->
     <script>
-        App.mobileMenu();
+        App.init();
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
     </script>
     </body>
 </html>

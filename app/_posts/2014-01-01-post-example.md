@@ -9,5 +9,3 @@ published: false
 class: blog
 
 ---
-
-<!--readmore-->
