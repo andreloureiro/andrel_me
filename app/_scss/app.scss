@@ -151,7 +151,7 @@ hr {
   }
 
   @media (min-width: $media-query-medium) {
-    width: 50em;
+    width: 64em;
     padding: 0;
   }
 }
@@ -335,11 +335,37 @@ header {
   }
 }
 
+.article-container {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+
+  @media (min-width: $media-query-medium) {
+    display: inline-block;
+    vertical-align: top;
+    width: 70%; 
+  }
+}
+
+.article-info-container {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+
+  @media (min-width: $media-query-medium) {
+    display: inline-block;
+    vertical-align: top;
+    width: 28%;
+    padding-left: 1em;
+    border-left: .2em solid $color-gray-light;
+  }
+}
+
 // article
 article, .container.labs, .container.projetos, .container.sobre, .container.post-list {
-  padding-left: 1em;
-  padding-right: 1em;
-  // margin-top: 6em;
+  padding: 0 1em 2em 1em;
   box-sizing: border-box;
 }
 
@@ -393,7 +419,7 @@ article, .container.labs, .container.projetos, .container.sobre, .container.post
   margin-bottom: 3em;
 
   .post__name {
-    margin: 0.4em auto 0.4em;
+    margin: 0 auto 0.4em;
   }
 
   .post__meta {
@@ -458,12 +484,26 @@ article, .container.labs, .container.projetos, .container.sobre, .container.post
   display: block;
   width: 100%;
   margin-top: 2em;
+  padding-left: 1em;
   border-top: 1px solid $color-gray-light;
 
   .info__by {
     font-size: 0.8em;
     font-style: italic;
     color: $color-gray;
+    .twitter-follow-button {
+      
+      @media (min-width: $media-query-medium) {
+        margin-left: 0;
+        margin-top: 1em;  
+      }
+    }
+  }
+
+  @media (min-width: $media-query-medium) {
+    margin-top: 0;
+    padding-left: 0;
+    border-top: none;
   }
 }
 
@@ -496,16 +536,21 @@ article, .container.labs, .container.projetos, .container.sobre, .container.post
     }
   }
 
-  @media (min-width: $media-query-small) {
+  @media (min-width: $media-query-medium) {
+    padding-left: 0;
     
     .share__title {
-      width: 7em;
+      display: inline-block;
+      vertical-align: middle;
     }
 
     .share__list {
+      display: inline-block;
+      vertical-align: middle;
+      width: auto;
 
       .share__item {
-        margin-right: 1.2em;
+        margin: 0 0 0 1em;
       }
     }
   }
@@ -533,6 +578,11 @@ article, .container.labs, .container.projetos, .container.sobre, .container.post
         padding: 0.4em 0.4em;
       }
     }
+  }
+
+  @media (min-width: $media-query-medium) {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

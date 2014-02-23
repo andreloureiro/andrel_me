@@ -7,6 +7,7 @@
 
       <div class="content container">
 
+        <div class="article-container">
           <article itemscope itemtype="http://schema.org/Article" class="post">
 
             <div class="post__title">
@@ -16,7 +17,7 @@
           
                   <p class="post__date" itemprop="datePublished">{{ page.date | date_to_string }}</p>
               </div>
-              <div class="post__share">
+              <!-- <div class="post__share">
                   <ul class="share__list">
                       <li class="share__item">
                           <p>Compartilhe</p>
@@ -32,11 +33,14 @@
                           </a>
                       </li>
                   </ul>
-              </div>
+              </div> -->
           </div>
           <div itemprop="articleBody">
             {{ content }}
           </div>
+        </div>
+
+        <div class="article-info-container">
           <div class="post__info">
               <p class="info__by">
                   Por <span itemprop="author">André Loureiro</span> em <time class="info__date" itemprop="datePublished">{{ page.date | date_to_string }}</time>.<a href="https://twitter.com/anlo_" class="twitter-follow-button" data-show-count="true" data-lang="pt-BR"></a>
@@ -45,6 +49,8 @@
           </article>
           {% include share.html %}
           {% include related.html %}
+        </div>
+
       </div>
 
     <!-- build:js({app,.tmp}) /js/scripts.js -->
