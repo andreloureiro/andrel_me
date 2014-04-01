@@ -7,8 +7,8 @@ class: blog
 {% for post in site.posts %}
 	<div class="post-list__item">
 	    <h2 class="item__title">
-	        <a href="{{ post.url }}">{{ post.title }}</a>
+	    	<p class="title__date">{{ post.date | date_to_string }}</p><a href="{{ post.url }}" class="title__text">{{ post.title }}</a>
 	    </h2>
-	    <p class="item__category">{{ post.category }}</p><p class="item__date">{{ post.date | date_to_string }}</p>
+
 	</div>
 {% endfor %}

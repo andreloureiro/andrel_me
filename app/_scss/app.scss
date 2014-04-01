@@ -12,8 +12,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: serif;
-  font-weight: 400;
+  font-family: $font-condensed;
+  font-weight: 300;
   color: $color-black;
 }
 
@@ -36,7 +36,7 @@ h1 > a, h2 > a {
 }
 
 h1, h2 {
-  font-family: $font-serif;
+  font-family: $font-condensed;
 }
 h3, h4, h5, h6 {
   font-family: $font-sans;
@@ -79,7 +79,7 @@ a {
   font-weight: 400;
   color: $color-black;
   &:hover {
-    color: $color-green
+    color: $color-hover
   }
 }
 
@@ -150,15 +150,17 @@ hr {
     padding: 0;
   }
 
-  @media (min-width: $media-query-medium) {
-    width: 64em;
-    padding: 0;
-  }
+  // @media (min-width: $media-query-medium) {
+  //   width: 64em;
+  //   padding: 0;
+  // }
 }
 
 
 header {
   margin-bottom: 3.1em;
+  padding: 2em 0 0;
+  text-align: center;
 
   .container {
 
@@ -175,6 +177,32 @@ header {
 
   @media (min-width: $media-query-small) {
     position: relative;
+  }
+
+  .header__link {
+    position: relative;
+    margin: auto;
+    
+    .header__img {
+      -webkit-transition: all 150ms ease-out;
+      position: relative;
+      width: 5em;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 0.3em solid $color-gray-light;
+
+      &:hover {
+        -webkit-transition: all 150ms ease-out;
+        -webkit-transform: scale(1.1);
+      }
+    }
+  }
+
+  .header__img {
+    position: relative;
+    width: 4em;
+    border-radius: 50%;
+    overflow: hidden;
   }
 }
 
@@ -229,7 +257,7 @@ header {
         // border-top: 1px solid $color-gray-light;
 
         &.list-item__link--ACTIVE {
-          color: $color-green;
+          color: $color-hover;
           background: $color-gray-light;
         }
 
@@ -251,28 +279,28 @@ header {
 
     &.blog {
       .list-item__link.blog {
-        color: $color-green;
+        color: $color-hover;
         background: $color-gray-light;
       }
     }
 
     &.sobre {
       .list-item__link.sobre {
-        color: $color-green;
+        color: $color-hover;
         background: $color-gray-light;
       }
     }
 
     &.projetos {
       .list-item__link.projetos {
-        color: $color-green;
+        color: $color-hover;
         background: $color-gray-light;
       }
     }
 
     &.labs {
       .list-item__link.labs {
-        color: $color-green;
+        color: $color-hover;
         background: $color-gray-light;
       }
     }
@@ -374,13 +402,33 @@ article, .container.labs, .container.projetos, .container.sobre, .container.post
 .post-list__item {
   display: block;
   width: 100%;
+  margin-bottom: 1.6em;
   padding-left: 1em;
   padding-right: 1em;
-  margin-bottom: 3em;
   box-sizing: border-box;
 
   .item__title {
-    margin: 0.4em auto 0.4em;
+    margin: 0.4em auto 1.4em;
+
+    .title__date {
+      display: inline-block;
+      vertical-align: middle;
+      width: 20%;
+      margin: 0;
+      font-size: 0.6em;
+      font-weight: 300;
+      color: $color-gray;
+    }
+
+    .title__text {
+      display: inline-block;
+      vertical-align: middle;
+      width: 76%;
+      margin-left: 2%;
+      font-size: .8em;
+      font-weight: 300;
+      line-height: 120%;
+    }
   }
   .item__category {
     display: inline-block;
@@ -389,13 +437,12 @@ article, .container.labs, .container.projetos, .container.sobre, .container.post
     margin: 0;
     font-size: 0.8em;
     color: $color-white;
-    background: $color-green;
+    background: $color-hover;
     text-transform: uppercase;
   }
   .item__date {
     display: inline-block;
     vertical-align: middle;
-    margin: 0 0 0 0.4em;
     font-family: $font-condensed;
     font-size: 0.8em;
     font-style: italic;
@@ -417,15 +464,15 @@ article, .container.labs, .container.projetos, .container.sobre, .container.post
   display: block;
   width: 100%;
   margin-bottom: 3em;
+  text-align: center;
 
   .post__name {
     margin: 0 auto 0.4em;
   }
 
   .post__meta {
-    display: inline-block;
-    vertical-align: middle;
-    width: 40%;
+    display: block;
+    width: 100%;
 
     .post__category {
       display: inline-block;
@@ -434,18 +481,16 @@ article, .container.labs, .container.projetos, .container.sobre, .container.post
       margin: 0;
       font-size: 0.8em;
       color: $color-white;
-      background: $color-green;
+      background: $color-hover;
       text-transform: uppercase;
     }
 
     .post__date {
-      display: inline-block;
-      vertical-align: middle;
-      margin: 0 0 0 0.4em;
+      display: block;
       font-family: $font-condensed;
       font-size: 0.8em;
-      font-style: italic;
       font-weight: 300;
+      text-align: center;
       color: $color-gray;
     }
   }
@@ -602,7 +647,7 @@ article, .container.labs, .container.projetos, .container.sobre, .container.post
 
   &:hover {
     background: $color-gray-light;
-    color: $color-green;
+    color: $color-hover;
   }
 }
 
@@ -621,4 +666,13 @@ article, .container.labs, .container.projetos, .container.sobre, .container.post
 		margin-top: 0;
 		margin-left: 2em
 	}
+}
+
+.footer {
+  display: block;
+  width: 100%;
+  margin-top: 3em;
+  padding: 2em 0;
+  text-align: center;
+  border-top: 2px solid $color-gray-light;
 }

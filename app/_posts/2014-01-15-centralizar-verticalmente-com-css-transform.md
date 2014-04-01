@@ -13,6 +13,8 @@ class: blog
 
 Vi no [zerosixthree](http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/) uma técnica bem interessante e simples para centralizar itens verticalmente. Ela usa transform2d, e como a propriedade é suportada por IE9+, pode ser aplicada tranquilamente. Acho que uma minoria de projetos ainda atende o IE8.
 
+<!--readmore-->
+
 ```css
 .center {
     position: relative;

@@ -12,6 +12,8 @@ class: blog
 
 É possível criar notificações no desktop com a API Notification do HTML5. A vantagem de usá-la em detrimento do `alert` é que conseguimos criar notificações ricas, com ícones, título e corpo de texto, orientação de escrita, etc.
 
+<!--readmore-->
+
 Você pode ver uma demo [aqui](http://andrel.me/labs/html5-notification) ou ver o código da demo no [Github](http://github.com/andreloureiro/html5-notification).
 
 ## Checando o suporte do browser

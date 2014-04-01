@@ -11,11 +11,11 @@ class: blog
 
 ---
 
-![Offline](/images/posts/html5-appcache.jpg)
-
 Uma API do HTML5 que vem recebendo bastante atenção é a [AppCache](), que permite forçar com que o browser faça o download e armazene os arquivos que quisermos no cache do navegador.
 
 O resultado é a otimização na economia de requests na próxima vez que o usuário precisar desse arquivo. Mas isso não quer dizer que você deve colocar o site inteiro no cache do browser, e sim o que for apenas necessário.
+
+<!--readmore-->
 
 ## Use com parcimônia
 

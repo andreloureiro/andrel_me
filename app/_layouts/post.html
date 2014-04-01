@@ -7,51 +7,23 @@
 
       <div class="content container">
 
-        <div class="article-container">
-          <article itemscope itemtype="http://schema.org/Article" class="post">
+        <article itemscope itemtype="http://schema.org/Article" class="post">
 
-            <div class="post__title">
-              <h1 class="post__name" itemprop="name">{{ page.title }}</h1>
-              <div class="post__meta">
-                  <p class="post__category">{{ page.category }}</p>
-          
-                  <p class="post__date" itemprop="datePublished">{{ page.date | date_to_string }}</p>
-              </div>
-              <!-- <div class="post__share">
-                  <ul class="share__list">
-                      <li class="share__item">
-                          <p>Compartilhe</p>
-                      </li>
-                      <li class="share__item">
-                          <a href="http://twitter.com/intent/tweet?text={{ page.title | stringtourl }}&url={{site.url}}{{page.url}}&via=anlo_" class="share__link twitter">
-                              <i class="fa fa-twitter"></i>
-                          </a>
-                      </li>
-                      <li class="share__item">
-                          <a href="http://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" class="share__link facebook">
-                              <i class="fa fa-facebook"></i>
-                          </a>
-                      </li>
-                  </ul>
-              </div> -->
+          <div class="post__title">
+            <h1 class="post__name" itemprop="name">{{ page.title }}</h1>
+            <div class="post__meta">
+              <p class="post__date" itemprop="datePublished">{{ page.date | date_to_string }}</p>
+            </div>
           </div>
-          <div itemprop="articleBody">
-            {{ content }}
-          </div>
+        <div itemprop="articleBody">
+          {{ content }}
         </div>
+      </article>
 
-        <div class="article-info-container">
-          <div class="post__info">
-              <p class="info__by">
-                  Por <span itemprop="author">André Loureiro</span> em <time class="info__date" itemprop="datePublished">{{ page.date | date_to_string }}</time>.<a href="https://twitter.com/anlo_" class="twitter-follow-button" data-show-count="true" data-lang="pt-BR"></a>
-              </p>
-          </div>
-          </article>
-          {% include share.html %}
-          {% include related.html %}
-        </div>
+    </div>
 
-      </div>
+    {% include footer.html %}
+
 
     <!-- build:js({app,.tmp}) /js/scripts.js -->
     <script src="/_src/app.js"></script>
